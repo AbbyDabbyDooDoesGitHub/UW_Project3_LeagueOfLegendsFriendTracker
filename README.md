@@ -1,3 +1,8 @@
+Andrew - routes and logins 
+Abby - Handlebars HTML / Building models for contacts
+Gwanju - Heroku Deployment/Stripe Integration
+
+
 # UW_Project3_LeagueOfLegendsFriendTracker
 ## Overview
 ```
