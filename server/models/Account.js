@@ -24,6 +24,12 @@ uniqueID: {
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
+  accounts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Account',
+    },
+  ],
 
 });
 
