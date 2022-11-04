@@ -8,13 +8,7 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
-  gameUsername: {
-    type: String,
-    required: 'you need to have a league of legends username!',
-    minlength: 1,
-    maxlength: 20,
-    trim: true,
-  },
+  
   email: {
     type: String,
     required: true,
@@ -26,12 +20,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  friendList: [
+  friends: [
     {
       type: String,
       trim: true,
     },
   ],
+ 
   accounts: [
     {
       type: Schema.Types.ObjectId,

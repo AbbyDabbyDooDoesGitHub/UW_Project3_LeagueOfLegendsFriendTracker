@@ -2,12 +2,21 @@ const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const accountsSchema = new Schema({
+    gamername: {
+        type: String,
+        required: 'you need to have a league of legends username!',
+        minlength: 1,
+        maxlength: 20,
+        trim: true,
+      },
  
- gameNotes : {
+ gameNote : {
     type: String,
     required: true,
     trim: true,
   },
+ 
+
   IRL: {
     type: Boolean,
     required: true,
