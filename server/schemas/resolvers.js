@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Account } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -7,9 +7,11 @@ const resolvers = {
     users: async () => {
       return User.find();
     },
-    user: async (parent, { username }) => {
-      return User.findOne({ username });
+
+    User: async (parent, { profileId }) => {
+      return User.findOne({ _id: userId });
     },
+    // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
@@ -22,24 +24,94 @@ const resolvers = {
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
+
       return { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user found with this email address');
+        throw new AuthenticationError('No user with this email found!');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect credentials');
+        throw new AuthenticationError('Incorrect password!');
       }
 
       const token = signToken(user);
-
       return { token, user };
+    },
+
+    // Add a third argument to the resolver to access data in our `context`
+    addFriend: async (parent, { userId, friend }, context) => {
+      // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: userId },
+          {
+            $addToSet: { friends: friend },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      // If user attempts to execute this mutation and isn't logged in, throw an error
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    addAccount: async (parent, { gameNote }, context) => {
+      if (context.user) {
+        const account = await Account.create({
+        gameNote,
+        IRL,
+          gamerName: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { accounts: account._id } }
+        );
+
+        return account;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    // Set up mutation so a logged in user can only remove their profile and no one else's
+    removeUser: async (parent, args, context) => {
+      if (context.user) {
+        return User.findOneAndDelete({ _id: context.user._id });
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    // Make it so a logged in user can only remove a skill from their own profile
+    removeFriend: async (parent, { friend }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { friends: friend } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeAccount: async (parent, { accountId }, context) => {
+      if (context.user) {
+        const account = await Account.findOneAndDelete({
+          _id: accountId,
+          gamerName: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { accounts: account._id } }
+        );
+
+        return account;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };

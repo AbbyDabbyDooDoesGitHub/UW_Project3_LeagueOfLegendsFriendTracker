@@ -8,6 +8,7 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
+  
   email: {
     type: String,
     required: true,
@@ -19,12 +20,19 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  // thoughts: [
-  //   {
-  //     type: Schema.Types.ObjectId,
-  //     ref: 'Thought',
-  //   },
-  // ],
+  friends: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
+ 
+  accounts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Account',
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {
