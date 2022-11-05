@@ -9,11 +9,11 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="bg-dark text-light mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Timeline</h1>
+            <h1 className="m-0">💕League  💕Of💕 Legends Friend Tracker! 💕</h1>
           </Link>
           <p className="m-0">Create a timeline of things</p>
         </div>

@@ -14,7 +14,7 @@ const Home = () => {
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
-          Something here
+          Please login or Signup to create  a profile where you can<br /> add friends, leave notes about friends/game
         </div>
         <div className="col-12 col-md-8 mb-3">
           {/* {loading ? (
