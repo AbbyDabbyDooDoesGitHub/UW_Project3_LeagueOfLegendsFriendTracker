@@ -8,7 +8,6 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
-  
   email: {
     type: String,
     required: true,
@@ -20,17 +19,10 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  friends: [
-    {
-      type: String,
-      trim: true,
-    },
-  ],
- 
-  accounts: [
+  thoughts: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Account',
+      ref: 'Thought',
     },
   ],
 });

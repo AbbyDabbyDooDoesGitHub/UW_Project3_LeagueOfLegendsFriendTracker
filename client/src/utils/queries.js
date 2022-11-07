@@ -6,6 +6,43 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      accounts {
+        _id
+        gamerName
+        gameNote
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_ACCOUNTS = gql`
+  query getAccounts {
+    accounts {
+      _id
+      author
+      gamerName
+      gameNote
+      createdAt
+    }
+  }
+`;
+
+export const QUERY_SINGLE_ACCOUNT = gql`
+  query getSingleAccount($accountId: ID!) {
+    account(accountId: $accountId) {
+      _id
+      author
+      gamerName
+      gameNote
+      createdAt
+      friends {
+        _id
+        author
+        friendName
+        friendNote
+        createdAt
+      }
     }
   }
 `;
@@ -16,6 +53,13 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      accounts {
+        _id
+        author
+        gamerName
+        gameNote
+        createdAt
+      }
     }
   }
 `;

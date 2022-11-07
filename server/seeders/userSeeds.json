@@ -2,77 +2,51 @@
   {
     "username": "Brian Kernighan",
     "email": "bkernighan@techfriends.dev",
-    "password": "password01",
-    "friends": ["friend1", "friend2", "friend3"]
+    "password": "password01"
   },
   {
     "username": "Max Kanat-Alexander",
     "email": "mkanatalexander@techfriends.dev",
-    "password": "password02",
-    "friends": ["Java", "Perl", "Apache", "Python"]
+    "password": "password02"
   },
   {
-    "username": "Amiko",
-    "email": "amiko@techfriends.dev",
-    "password": "password03",
-    "friends": ["NodeJS", "MySQL", "MongoDB", "React", "CSS-in-JS"]
+    "username": "Why The Lucky Stiff",
+    "email": "wtls@techfriends.dev",
+    "password": "password03"
   },
   {
     "username": "Kent Beck",
     "email": "kbeck@techfriends.dev",
-    "password": "password04",
-    "friends": [
-      "Test-Driven Development",
-      "Extreme Programming",
-      "Software Design Patterns",
-      "JUnit"
-    ]
+    "password": "password04"
   },
   {
     "username": "Edward V. Berard",
     "email": "evberard@techfriends.dev",
-    "password": "password05",
-    "friends": ["Object-Oriented Design"]
+    "password": "password05"
   },
   {
     "username": "Alan Kay",
     "email": "akay@techfriends.dev",
-    "password": "password06",
-    "friends": [
-      "Graphical User Interface (GUI) Design",
-      "Jazz Guitar",
-      "Education"
-    ]
+    "password": "password06"
   },
   {
     "username": "C.A.R. Hoare",
     "email": "choare@techfriends.dev",
-    "password": "password07",
-    "friends": ["Algorithms", "Quicksort", "Hoare Logic"]
+    "password": "password07"
   },
   {
-    "name": "David Thomas",
+    "username": "David Thomas",
     "email": "dthomas@techfriends.dev",
-    "password": "password08",
-    "friends": ["Author", "Code Kata", "Ruby", "Pragmatic Programming"]
+    "password": "password08"
   },
   {
     "username": "Donald Knuth",
     "email": "dknuth@techfriends.dev",
-    "password": "password09",
-    "friends": ["TeX Computer Typesetting", "Algorithms", "Author"]
+    "password": "password09"
   },
   {
     "username": "Lernantino",
     "email": "lernantino@techfriends.dev",
-    "password": "password10",
-    "friends": [
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "Design Systems",
-      "Typescript",
-      "PWAs"
-    ]
+    "password": "password10"
   }
 ]

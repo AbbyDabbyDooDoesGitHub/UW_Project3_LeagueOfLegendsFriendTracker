@@ -23,3 +23,38 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_ACCOUNT = gql`
+  mutation addAccount($gamerName: String!, $gameNote: string!) {
+    addAccount(gamerName: $gamerName, gameNote: $gameNote) {
+      _id
+      gamerName
+      gameNote
+    author
+      createdAt
+      friends {
+        _id
+        friendName
+        friendNote
+      }
+    }
+  }
+`;
+
+export const ADD_FRIEND = gql`
+  mutation addFriend($accountId: ID!, $friendName: String!, $friendNote: String!) {
+    addFriend(accountId: $accountId, friendName: $friendName, friendNote: $friendNote) {
+      _id
+      gamerName
+      gameNote
+    author
+      createdAt
+      friends {
+        _id
+        friendName
+        friendNote
+        createdAt
+      }
+    }
+  }
+`;
