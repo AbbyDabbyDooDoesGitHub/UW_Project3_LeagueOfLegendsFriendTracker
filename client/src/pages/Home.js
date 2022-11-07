@@ -1,27 +1,33 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-// import { QUERY_THOUGHTS } from '../utils/queries';
+import AccountList from '../components/AccountList';
+import AccountForm from '../components/AccountForm';
+
+import { QUERY_ACCOUNTS } from '../utils/queries';
 
 const Home = () => {
-  // const { loading, data } = useQuery(QUERY_THOUGHTS);
-  // const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_ACCOUNTS);
+  const accounts = data?.accounts || [];
 
   return (
     <main>
       <div className="flex-row justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
+          style={{ border: '1px  #1a1a1a' }}
         >
-          Please login or Signup to create  a profile where you can<br /> add friends, leave notes about friends/game
+          <AccountForm />
         </div>
         <div className="col-12 col-md-8 mb-3">
-          {/* {loading ? (
+          {loading ? (
             <div>Loading...</div>
           ) : (
-            "Something here"
-          )} */}
+            <AccountList
+              accounts={accounts}
+              title="Create your game account..."
+            />
+          )}
         </div>
       </div>
     </main>

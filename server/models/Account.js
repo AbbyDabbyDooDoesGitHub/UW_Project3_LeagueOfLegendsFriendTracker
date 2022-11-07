@@ -1,49 +1,55 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-const accountsSchema = new Schema({
-
-    gameNote : {
-        type: String,
-        required: true,
-        trim: true,
-      },
-     
-    gamerName: {
-        type: String,
-        required: 'you need to have a league of legends username!',
-        minlength: 1,
-        maxlength: 20,
-        trim: true,
-      },
- 
-
-
-  IRL: {
-    type: Boolean,
+const accountSchema = new Schema({
+  gameNote: {
+    type: String,
+    required: 'You need to leave a thought!',
+    minlength: 1,
+    maxlength: 280,
+    trim: true,
+  },
+  gamerName: {
+    type: String,
     required: true,
-    default: false
-},
-
-uniqueID: {
-    type: Number,
+    trim: true,
+  },
+  author: {
+    type: String,
     required: true,
-   unique: true
-},
+   
+  },
   createdAt: {
     type: Date,
     default: Date.now,
     get: (timestamp) => dateFormat(timestamp),
   },
-  accounts: [
+  friends: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Account',
+      friendNote: {
+        type: String,
+        required: true,
+        minlength: 1,
+        maxlength: 280,
+      },
+      friendName: {
+        type: String,
+        required: true,
+      },
+      author: {
+        type: String,
+        required: true,
+       
+      },
+      createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
+      },
     },
   ],
-
 });
 
-const Account = model('Account', accountsSchema);
+const Account = model('Account', accountSchema);
 
 module.exports = Account;

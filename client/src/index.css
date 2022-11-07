@@ -69,7 +69,7 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent;
+  background-color: skyblue;
 }
 
 /**
@@ -351,6 +351,7 @@ END NORMALIZE CSS
 html,
 body {
   min-height: 100%;
+  
 }
 
 body {
@@ -361,6 +362,7 @@ body {
     'Segoe UI Symbol';
   font-size: 16px;
   color: #1a1a1a;
+ 
 }
 
 h1,
