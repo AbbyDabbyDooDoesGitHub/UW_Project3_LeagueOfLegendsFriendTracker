@@ -6,8 +6,10 @@ import { ADD_FRIEND } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const FriendForm = ({ userId }) => {
-  const [friend, setFriend] = useState('');
+const FriendForm = ({ accountId }) => {
+  const [friendName, setFriendName] = useState('');
+  const [friendNote, setFriendNote] = useState('');
+  const [characterCount, setCharacterCount] = useState(0);
 
   const [addFriend, { error }] = useMutation(ADD_FRIEND);
 
@@ -15,48 +17,84 @@ const FriendForm = ({ userId }) => {
     event.preventDefault();
 
     try {
-      const data = await addFriend({
-        variables: { userId, friend },
+      const { data } = await addFriend({
+        variables: {
+          accountId,
+          friendName,
+          friendNote,
+          author: Auth.getProfile().data.username,
+        },
       });
+    //   setFriendName('');
+    // } catch (err) {
+    //   console.error(err);
+    // }
+  
 
-      setFriend('');
+      setFriendName('');
+      setFriendNote('');
     } catch (err) {
       console.error(err);
     }
   };
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    if (name === 'friendName' && 'friendNote' && value.length <= 280) {
+      setFriendName(value);
+      setFriendNote(value);
+      setCharacterCount(value.length);
+    }
+  };
+
   return (
     <div>
-      <h4>Endorse some more friends below.</h4>
+      <h4>Add your friend and leave a note about them</h4>
 
       {Auth.loggedIn() ? (
-        <form
-          className="flex-row justify-center justify-space-between-md align-center"
-          onSubmit={handleFormSubmit}
-        >
-          <div className="col-12 col-lg-9">
-            <input
-              placeholder="Add a friend..."
-              value={friend}
+        <>
+          <p
+            className={`m-0 ${
+              characterCount <= 280 || error ? 'text-danger' : ''
+            }`}
+          >
+            Character Count: {characterCount}/280
+            {error && <span className="ml-2">{error.message}</span>}
+          </p>
+          <form
+            className="flex-row justify-center justify-space-between-md align-center"
+            onSubmit={handleFormSubmit}
+          >
+            <div className="col-12 col-lg-9">
+              <input
+              name="friendName"
+              placeholder="Add your friend's name"
+              value={friendName}
               className="form-input w-100"
-              onChange={(event) => setFriend(event.target.value)}
-            />
-          </div>
-
-          <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-3" type="submit">
-              Add Friend
-            </button>
-          </div>
-          {error && (
-            <div className="col-12 my-3 bg-danger text-white p-3">
-              {error.message}
+              style={{ lineHeight: '1.5', resize: 'vertical' }}
+              onChange={handleChange}
+              ></input>
+              <textarea
+                name="friendNote"
+                placeholder="Add your note about this friend..."
+                value={friendNote}
+                className="form-input w-100"
+                style={{ lineHeight: '1.5', resize: 'vertical' }}
+                onChange={handleChange}
+              ></textarea>
             </div>
-          )}
-        </form>
+
+            <div className="col-12 col-lg-3">
+              <button className="btn btn-primary btn-block py-3" type="submit">
+                Add friend
+              </button>
+            </div>
+          </form>
+        </>
       ) : (
         <p>
-          You need to be logged in to add friends. Please{' '}
+          You need to be logged in to view your account. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

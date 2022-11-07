@@ -5,16 +5,21 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find();
+      return User.find().populate('acounts');
     },
-
-    User: async (parent, { profileId }) => {
-      return User.findOne({ _id: userId });
+    user: async (parent, { username }) => {
+      return User.findOne({ username }).populate('accounts');
     },
-    // By adding context to our query, we can retrieve the logged in user without specifically searching for them
+    accounts: async (parent, { username }) => {
+      const params = username ? { username } : {};
+      return Account.find(params).sort({ createdAt: -1 });
+    },
+    account: async (parent, { accountId }) => {
+      return Account.findOne({ _id: accountId });
+    },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id });
+        return User.findOne({ _id: context.user._id }).populate('accounts');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -24,49 +29,30 @@ const resolvers = {
     addUser: async (parent, { username, email, password }) => {
       const user = await User.create({ username, email, password });
       const token = signToken(user);
-
       return { token, user };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('No user with this email found!');
+        throw new AuthenticationError('No user found with this email address');
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new AuthenticationError('Incorrect credentials');
       }
 
       const token = signToken(user);
+
       return { token, user };
     },
-
-    // Add a third argument to the resolver to access data in our `context`
-    addFriend: async (parent, { userId, friend }, context) => {
-      // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
-      if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: userId },
-          {
-            $addToSet: { friends: friend },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      // If user attempts to execute this mutation and isn't logged in, throw an error
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    addAccount: async (parent, { gameNote }, context) => {
+    addAccount: async (parent, { gameNote, gamerName }, context) => {
       if (context.user) {
         const account = await Account.create({
-        gameNote,
-        IRL,
+          gameNote,
+          
           gamerName: context.user.username,
         });
 
@@ -79,20 +65,19 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    // Set up mutation so a logged in user can only remove their profile and no one else's
-    removeUser: async (parent, args, context) => {
+    addfriend: async (parent, { accountId, commentText }, context) => {
       if (context.user) {
-        return User.findOneAndDelete({ _id: context.user._id });
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    // Make it so a logged in user can only remove a skill from their own profile
-    removeFriend: async (parent, { friend }, context) => {
-      if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { friends: friend } },
-          { new: true }
+        return Account.findOneAndUpdate(
+          { _id: accountId },
+          {
+            $addToSet: {
+              friends: { friendNote, friendName: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
         );
       }
       throw new AuthenticationError('You need to be logged in!');
@@ -110,6 +95,23 @@ const resolvers = {
         );
 
         return account;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeFriend: async (parent, { accountId, friendId }, context) => {
+      if (context.user) {
+        return Account.findOneAndUpdate(
+          { _id: accountId },
+          {
+            $pull: {
+              friends: {
+                _id: friendId,
+                friendName: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
       }
       throw new AuthenticationError('You need to be logged in!');
     },

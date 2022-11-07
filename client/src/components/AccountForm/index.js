@@ -7,7 +7,8 @@ import { QUERY_ACCOUNTS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
-const AcountForm = () => {
+const AccountForm = () => {
+  const [gamerName, setgamerName] = useState('');
   const [gameNote, setGameNote] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
@@ -40,11 +41,13 @@ const AcountForm = () => {
     try {
       const { data } = await addAccount({
         variables: {
+          gamerName,
           gameNote,
-          gamerName: Auth.getProfile().data.username,
+          author: Auth.getProfile().data.username,
         },
       });
 
+      setgamerName('');
       setGameNote('');
     } catch (err) {
       console.error(err);
@@ -54,21 +57,24 @@ const AcountForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'gameNote' && value.length <= 280) {
+    if (name === 'gamerName' && 'gameNote' && value.length <= 280) {
+      setgamerName(value);
       setGameNote(value);
       setCharacterCount(value.length);
     }
   };
 
   return (
-    <div>
-      <h3>Leave a note about your experiences playing League of Legends</h3>
+
+   
+     <div>
+      <h3>What do you want to say about this game?</h3>
 
       {Auth.loggedIn() ? (
         <>
           <p
             className={`m-0 ${
-              characterCount === 280 || error ? 'text-danger' : ''
+              characterCount <= 280 || error ? 'text-danger' : ''
             }`}
           >
             Character Count: {characterCount}/280
@@ -78,10 +84,18 @@ const AcountForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
+              <input
+              name='gamerName'
+              placeholder='what is your game username'
+              value={gamerName}
+              className="form-input w-100"
+              style={{ lineHeight: '1.5', resize: 'vertical' }}
+              onChange={handleChange}
+              ></input>
               <textarea
                 name="gameNote"
-                placeholder="Here's is new note..."
-                value={thoughtText}
+                placeholder="Here's a new note..."
+                value={gameNote}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -90,7 +104,7 @@ const AcountForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add note
+                Add Account
               </button>
             </div>
             {error && (
@@ -102,7 +116,7 @@ const AcountForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your note. Please{' '}
+          You need to be logged in to view your game account. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
@@ -110,4 +124,4 @@ const AcountForm = () => {
   );
 };
 
-export default AcountForm;
+export default AccountForm;
