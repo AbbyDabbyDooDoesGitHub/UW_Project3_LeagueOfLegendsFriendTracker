@@ -65,7 +65,7 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addfriend: async (parent, { accountId, commentText }, context) => {
+    addFriend: async (parent, { accountId, commentText }, context) => {
       if (context.user) {
         return Account.findOneAndUpdate(
           { _id: accountId },
