@@ -25,10 +25,6 @@
 
 header {
   width: 100%;
-
-  /* display: inline-block; */
-
-  /* background-color: var(--dkPurple); */
 }
 
 nav {
@@ -40,6 +36,10 @@ nav {
 
 #navBar-titleDiv {
   display: inline-block;
+}
+
+ul#navBar-titleDiv.left {
+  height:0px;
 }
 
 #navBar-logo {
@@ -81,7 +81,55 @@ nav {
   color: var(--ltPurple);
 }
 
+#marquee-div {
+  background-color: #4ace39;
+  background-image:url("../img/banner-backgrounds/vecteezy_abstract-blue-fluid-wave-banner-template_12389891.JPG");
+  margin: 0;
+  padding: 0;
+}
 
 body { 
+  margin: 0;
+  padding: 0;
   background-color: var(--ltGrey); 
+  background-image:url("../img/backgrounds/free-purple-triangles-vector.jpg");
+}
+
+
+.marquee-outer {
+  height: 300px;	
+  /* overflow: hidden; */
+  position: relative;
+  color: orange;
+}
+.marquee-inner {
+  display: inline-flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Apply animation to this element */	
+  -moz-animation: scroll-left 45s linear infinite;
+  -webkit-animation: scroll-left 45s linear infinite;
+  animation: scroll-left 45s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+  0%   { 
+  -moz-transform: translateX(0%); /* Browser bug fix */
+  -webkit-transform: translateX(0%); /* Browser bug fix */
+  transform: translateX(0%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Browser bug fix */
+  -webkit-transform: translateX(-100%); /* Browser bug fix */
+  transform: translateX(-100%); 
+  }
 }
