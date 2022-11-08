@@ -14,7 +14,7 @@ const Header = () => {
         {/* <img src={proLogo} className='proLogo' width='200px' hight='200px'/> */}
         <div>
           <Link className="text-light" to="/">
-          <img src={proLogo} className='proLogo' width='200px' hight='200px'/>
+          <img src={proLogo} className='proLogo' alt="" width='200px' hight='200px'/>
             <h1 className="m-0">Hawkshot</h1>
           </Link>
           <p className="m-0">💕Create a gamer's contact list💕</p>
