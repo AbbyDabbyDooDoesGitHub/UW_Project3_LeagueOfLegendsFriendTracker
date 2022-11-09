@@ -89,29 +89,42 @@ ul#navBar-titleDiv.left {
 }
 
 body { 
+  /* width: 100%; */
   margin: 0;
   padding: 0;
   background-color: var(--ltGrey); 
+
   background-image:url("../img/backgrounds/free-purple-triangles-vector.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
+
+
+/* MARQUEE FUNCTIONALITY --------------------- */
 .marquee-outer {
+  width: 100%;
   height: 300px;	
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
-  color: orange;
+  /* color: orange; */
 }
+
 .marquee-inner {
   display: inline-flex;
   position: absolute;
   width: 100%;
   height: 100%;
+
   /* Apply animation to this element */	
   -moz-animation: scroll-left 45s linear infinite;
   -webkit-animation: scroll-left 45s linear infinite;
   animation: scroll-left 45s linear infinite;
+
+  /* animation-iteration-count: infinite; */
 }
+
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
   0%   { -moz-transform: translateX(100%); }
