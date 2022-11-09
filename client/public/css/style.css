@@ -1,14 +1,16 @@
+/* OVERALL COLOR/TEXT VARS ------------------- */
 :root {
 
-  --mdPurple: #5e17eb;
-  --mdBlue:   #5271ff;
-  --ltPurple: #a6a2ff;
-  --ltGrey:   #cdcdcd;
-  --ltYellow: #fff6a2;
-  --white:    #ffffff;
-  --dkPurple: #130039;
+  --mdPurple:       #5e17eb;
+  --mdBlue:         #5271ff;
+  --ltPurple:       #a6a2ff;
+  --ltGrey:         #cdcdcd;
+  --ltYellow:       #fff6a2;
+  --white:          #ffffff;
+  --dkPurple:       #130039;
+  --dkPurpleWTrnsp: #1300399d;
 
-  --font-subtitle: "Quantico";
+  --font-subtitle:  "Quantico";
 
 
   /* --font-subtitle: "Poiret One"; */
@@ -19,10 +21,10 @@
   /* --font-subtitle: "Press Start 2P"; */
   /* --font-subtitle: "El Messiri"; */
 
-
 }
 
-
+/* NAVBAR STYLINGS --------------------------- */
+/* fills the width of page */
 header {
   width: 100%;
 }
@@ -31,13 +33,15 @@ nav {
   width: 100%;
   height: 150px;
 
-  background-color: var(--dkPurple);
+  /* slight transparency so bgrd comes through */
+  background-color: var(--dkPurpleWTrnsp);
 }
 
 #navBar-titleDiv {
   display: inline-block;
 }
 
+/* this prevents gap between nav and banner */
 ul#navBar-titleDiv.left {
   height:0px;
 }
@@ -79,6 +83,7 @@ ul#navBar-titleDiv.left {
 .nav-a:hover {
   opacity: 1;
   color: var(--ltPurple);
+  background-color: #00000000; 
 }
 
 #marquee-div {

@@ -75,16 +75,21 @@
 
           <ul class="right" id="navBar-linksDiv">
 
-            <!-- <li> <a class="nav-a" href="/">About Us</a></li> -->
             <!-- <li><a class="nav-a" href="/home">Home</a></li> -->
-            <li> <a class="nav-a" href="/friendsHome">My Friends</a></li>
+
+            <!-- IF LOGGED IN -->
+            <!-- <li> <a class="nav-a" href="/friendsHome">My Friends</a></li> -->
+
             <li><a class="nav-a" href="/payment">Donate</a></li>
 
-            <!-- {{#if logged_in}} -->
+            <!-- IF NOT LOGGED IN -->
+            <li><a class="nav-a" href="/payment">Create Account</a></li>
+
+            <!-- IF LOGGED IN -->
             <!-- <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li> -->
-            <!-- {{else}} -->
+
+            <!-- IF NOT LOGGED IN -->
             <li><button class="btn navBtn" id="navBar-signIn">Sign In</button></li>
-            <!-- <li><a class="nav-a" href="/stripe">Create Account</a></li> -->
 
           </ul>
         </div>
@@ -108,6 +113,16 @@
         <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
         <li><img src="/client/public/img/banner-backgrounds/league-of-legends/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg" height="300px" alt="Banner image" /></li>          
       </ul>
+    </div>
+
+    <div id="aboutUs-div">
+
+      <h2>What is Hawkshot?</h2>
+
+      <h3>You've been playing a game and suddenly find yourself paired with </h3>
+
+
+
     </div>
 
 
