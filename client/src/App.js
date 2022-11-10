@@ -15,6 +15,10 @@ import SingleAccount from './pages/SingleAccount';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FriendList from './components/FriendList';
+import FriendForm from './components/FriendForm';
+import { ADD_ACCOUNT } from './utils/mutations';
+import AccountList from './components/AccountList';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -73,6 +77,11 @@ function App() {
                 path="/accounts/:accountId" 
                 element={<SingleAccount />}
               />
+               <Route 
+                path="/friends/:friendId"
+                element={<FriendForm/>}
+              />
+          
             </Routes>
           </div>
           <Footer />
