@@ -23,9 +23,9 @@ const AccountList = ({
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${account.author}`}
+                  to={`/profiles/${account.username}`}
                 >
-                  {account.author} <br />
+                  {account.username} <br />
                   <span style={{ fontSize: '1rem' }}>
                     created this game account on {account.createdAt}
                   </span>

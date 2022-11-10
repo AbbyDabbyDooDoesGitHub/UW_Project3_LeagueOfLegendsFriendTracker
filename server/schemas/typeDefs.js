@@ -19,8 +19,8 @@ const typeDefs = gql`
 
   type Friend {
     _id: ID
-    friendNote: String
     friendName: String
+    friendNote: String
     createdAt: String
   }
 
@@ -40,10 +40,10 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addAccount(gamerNote: String!): Account
-    addFriend(accountId :ID!, friendNote: String!): Account
+    addAccount(gamerName: String!, gameNote: String!): Account
+    addFriend(accountId :ID!, friendName: String!, friendNote: String!): Account
     removeAccount(accountId: ID!): Account
-    removeFriend( friendId: ID!): Account
+    removeFriend(accountId: ID!, friendId: ID!): Friend
   }
 `;
 
