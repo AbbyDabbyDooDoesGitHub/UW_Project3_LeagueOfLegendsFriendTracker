@@ -280,6 +280,25 @@ footer {
   transform: translate(-40%, -50%);
 }
 
+#aboutUs-infoGraphics-bottomLinks {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
 
+  text-align: center;
+}
 
+#aboutUs-infoGraphics-bottomLinks a {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
 
+  background-color: var(--mdBlue);
+  color: var(--dkPurple);
+}
+
+#aboutUs-infoGraphics-bottomLinks a:hover {
+  background-color: var(--ltYellow);
+  color: var(--dkPurpleWTrnsp);
+}
