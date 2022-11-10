@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User, Account } = require('../models');
+const { User, Account, Product, Category } = require('../models');
 const userSeeds = require('./userSeeds.json');
 const accountSeeds = require('./accountSeeds.json');
 
@@ -22,6 +22,43 @@ db.once('open', async () => {
         }
       );
     }
+
+    //Seeding for Stripe
+    await Category.deleteMany();
+
+  const categories = await Category.insertMany([
+    { name: 'Food' },
+    { name: 'Household Supplies' },
+    { name: 'Electronics' },
+    { name: 'Books' },
+    { name: 'Toys' }
+  ]);
+
+  console.log('categories seeded');
+
+  await Product.deleteMany();
+
+  const products = await Product.insertMany([
+    {
+      name: 'Tin of Cookies',
+      description:
+        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      image: 'cookie-tin.jpg',
+      category: categories[0]._id,
+      price: 2.99,
+      quantity: 500
+    },
+    {
+      name: 'Canned Coffee',
+      description:
+        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+      image: 'canned-coffee.jpg',
+      category: categories[0]._id,
+      price: 1.99,
+      quantity: 500
+    },
+  ]);
+  
   } catch (err) {
     console.error(err);
     process.exit(1);
