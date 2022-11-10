@@ -19,13 +19,13 @@ const AccountList = ({
       {accounts &&
         accounts.map((account) => (
           <div key={account._id} className="card mb-3">
-            <h4 className="card-header bg-secondary text-light p-2 m-0">
+            <h4 className="card-header bg-primary text-light p-2 m-0">
               {showUsername ? (
                 <Link
                   className="text-light"
-                  to={`/profiles/${account.author}`}
+                  to={`/profiles/${account.username}`}
                 >
-                  {account.author} <br />
+                  {account.username} <br />
                   <span style={{ fontSize: '1rem' }}>
                     created this game account on {account.createdAt}
                   </span>
@@ -38,7 +38,7 @@ const AccountList = ({
                 </>
               )}
             </h4>
-            <div className="card-body bg-light p-2">
+            <div className="card-body bg secondary p-2">
               <p>{account.gamerName}<br />{account.gameNote}</p>
               {/* <p>{account.gameNote}</p> */}
             </div>

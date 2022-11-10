@@ -48,12 +48,13 @@ const resolvers = {
 
       return { token, user };
     },
-    addAccount: async (parent, { gameNote, gamerName }, context) => {
+    addAccount: async (parent, { gamerName, gameNote }, context) => {
       if (context.user) {
         const account = await Account.create({
+          gamerName,
           gameNote,
           
-          gamerName: context.user.username,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -65,13 +66,13 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
-    addfriend: async (parent, { accountId, commentText }, context) => {
+    addFriend: async (parent, { accountId, friendName, friendNote }, context) => {
       if (context.user) {
         return Account.findOneAndUpdate(
           { _id: accountId },
           {
             $addToSet: {
-              friends: { friendNote, friendName: context.user.username },
+              friends: { friendName, friendNote: context.user.username },
             },
           },
           {
@@ -86,7 +87,7 @@ const resolvers = {
       if (context.user) {
         const account = await Account.findOneAndDelete({
           _id: accountId,
-          gamerName: context.user.username,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -106,7 +107,7 @@ const resolvers = {
             $pull: {
               friends: {
                 _id: friendId,
-                friendName: context.user.username,
+                username: context.user.username,
               },
             },
           },
