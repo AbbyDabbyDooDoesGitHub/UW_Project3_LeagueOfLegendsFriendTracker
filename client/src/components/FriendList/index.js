@@ -36,7 +36,7 @@ const FriendList = ({ friends = [] }) => {
             <div key={friend._id} className="col-12 mb-3 pb-3">
               <div className="p-3 bg-dark text-light">
                 <h5 className="card-header">
-                  {friend.username} added{' '}
+                  {user.context} added{' '}
                   <span style={{ fontSize: '0.825rem' }}>
                     on {friend.createdAt}
                   </span>
