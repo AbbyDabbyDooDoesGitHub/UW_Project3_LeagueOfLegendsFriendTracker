@@ -12,7 +12,7 @@ const FriendList = ({ friends = [] }) => {
   // });
 
   // const friend = data?.friend || {};
-
+// test
   // if (loading) {
   //   return <div>Loading...</div>;
   // }
