@@ -1,9 +1,21 @@
 import React from 'react';
+// import { QUERY_ME} from "../../utils/queries"
+// import { useQuery } from '@apollo/client';
 
 const FriendList = ({ friends = [] }) => {
   if (!friends.length) {
     return <h3>No Friends added Yet</h3>;
   }
+  // const { loading, data } = useQuery(QUERY_ME, {
+    // pass URL parameter
+    // variables: { accountId: accountId },
+  // });
+
+  // const friend = data?.friend || {};
+
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <>
@@ -24,7 +36,7 @@ const FriendList = ({ friends = [] }) => {
                     on {friend.createdAt}
                   </span>
                 </h5>
-                <p className="card-body">{friend.friendNamet}<br />
+                <p className="card-body">{friend.friendName}<br />
                 {friend.friendNote}</p>
               </div>
             </div>
