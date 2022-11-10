@@ -10,7 +10,9 @@
   --dkPurple:       #130039;
   --dkPurpleWTrnsp: #130039d8;
 
+  --font-logoFont:  "Hammersmith One";
   --font-subtitle:  "Quantico";
+  --font-pixels:    "Press Start 2P";
 
 /* 
   --font-bulletText: "Poiret One"; */
@@ -21,6 +23,8 @@
   --font-bulletText: "Satisfy";
   --font-bulletText: "Press Start 2P";
   --font-bulletText: "El Messiri";
+  --font-bulletText: "Trebuchet MS";
+  --font-bulletText: "Hammersmith One";
 
 }
 
@@ -158,31 +162,79 @@ body {
 }
 
 
+/* FOOTER ------------------------------------ */
+footer {
+  width: 100%;
+  height: 90px;
+  margin-top: 25px;
+  
+  text-align: center;
+
+  /* slight transparency so bgrd comes through */
+  background-color: var(--dkPurpleWTrnsp);
+}
+
+#footer-div {
+  display: inline-flex;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-text {
+  padding: 40px;
+  padding-bottom: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: var(--font-pixels);
+  color: var(--mdPurple);
+}
+
+.footer-icon {
+  margin: 10px;
+  height: 70px;
+}
+
+
+/* PAGE SPECIFIC STYLING --------------------- */
+
+
 /* HOME/ABOUT BODY --------------------------- */
 #aboutUs-div {
+  margin: 0px;
   width: 100%;
   display: inline-block;
 }
 
-#aboutUs-div-left {
-  float: left;
-  width: 50%;
+/* INFO GRAPHICS ----------------------------- */
+#aboutUs-div-content {
+  margin: auto;
+  width: 70%;
 }
 
-/* INFO GRAPHICS ----------------------------- */
-#aboutUs-div-right {
-  float: right;
-  width: 50%;
+#aboutUs-infoGraphics-heading {
+  width: 100%;
+  height: 70px;
+
+  text-align: center;
+}
+
+#aboutUs-infoGraphic-headingText {
+  padding: 10px;
+
+  font-size: 45px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+
 }
 
 .aboutUs-infoGraphics {
   display: inline-block;
 
+  width: 100%;
   height: 170px;
-  width: 90%;
-  margin: 45px;
-  margin-left: 20px;
-  margin-bottom: 0px;
+  margin-top: 25px;
+  margin-bottom: 20px;
   border-radius: 80px;
 
   background-color: var(--ltGrey);
@@ -195,13 +247,39 @@ body {
   height: 130px;
 }
 
-.aboutUs-infoGraphicText {
-  margin: 20px;
+.aboutUs-infoGraphicText-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 27px;
+  margin-right: 50px;
 
-  font-size: 25px;
+  font-size: 27px;
   color: var(--dkPurpleWTrnsp);
   font-family: var(--font-bulletText);
 
+  height: 150px;
+  /* border: 3px solid green; */
+  position: relative;
 }
+
+.aboutUs-infoGraphicText {
+
+  width: 70%;
+
+  font-size: 27px;
+  color: var(--dkPurpleWTrnsp);
+  font-family: var(--font-bulletText);
+
+  line-height: 1.5;
+  vertical-align: middle;
+
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+}
+
+
+
 

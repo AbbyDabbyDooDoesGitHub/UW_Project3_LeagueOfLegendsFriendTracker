@@ -12,6 +12,8 @@ https://www.vecteezy.com/vector-art/94617-free-purple-triangles-vector
 
 CSS MARQUEE https://www.html.am/html-codes/marquees/css-marquee.cfm
 
+noun-gaming-4896856    gaming by Iki from <a href="https://thenounproject.com/browse/icons/term/gaming/" target="_blank" title="gaming Icons">Noun Project</a>
+
 
 AATROX
 
