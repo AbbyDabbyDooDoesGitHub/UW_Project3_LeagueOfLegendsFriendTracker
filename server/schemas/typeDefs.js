@@ -47,7 +47,6 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
-    quantity: Int
     price: Float
     category: Category
   }
@@ -87,7 +86,6 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
-    updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
     addAccount(gamerName: String!, gameNote: String!): Account
     addFriend(accountId :ID!, friendName: String!, friendNote: String!): Account

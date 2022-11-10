@@ -27,11 +27,8 @@ db.once('open', async () => {
     await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Donations' },
+    { name: 'Other' },
   ]);
 
   console.log('categories seeded');
@@ -40,24 +37,42 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'Donate $5.00',
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+        'Send a donation of 5 dollars.',
       image: 'cookie-tin.jpg',
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 5.00,
     },
     {
-      name: 'Canned Coffee',
+      name: 'Donate $10.00',
       description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
+        'Send a donation of 10 dollars. Thank you!',
       image: 'canned-coffee.jpg',
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 10.00,
+    },
+    {
+      name: 'Increase Friend List Size',
+      description:
+        'Gain 10 more slots on your friends list.',
+      image: 'canned-coffee.jpg',
+      category: categories[0]._id,
+      price: 2.50,
     },
   ]);
+
+  await User.create({
+    firstName: 'Pamela',
+    lastName: 'Washington',
+    email: 'pamela@testmail.com',
+    password: 'password12345',
+    orders: [
+      {
+        products: [products[0]._id, products[1]._id, products[2]._id]
+      }
+    ]
+  });
   
   } catch (err) {
     console.error(err);
