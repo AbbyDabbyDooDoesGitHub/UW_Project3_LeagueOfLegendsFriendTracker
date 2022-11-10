@@ -15,6 +15,26 @@ CSS MARQUEE https://www.html.am/html-codes/marquees/css-marquee.cfm
 noun-gaming-4896856    gaming by Iki from <a href="https://thenounproject.com/browse/icons/term/gaming/" target="_blank" title="gaming Icons">Noun Project</a>
 
 
+noun-lock-4969686  Lock by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/lock/" target="_blank" title="Lock Icons">Noun Project</a>
+
+noun-message-4869933  message by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/message/" target="_blank" title="message Icons">Noun Project</a>
+
+noun-user-4869878  User by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/user/" target="_blank" title="User Icons">Noun Project</a>
+
+noun-approved-5029333  approved by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/approved/" target="_blank" title="approved Icons">Noun Project</a>
+
+
+noun-delete-5029335  Delete by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/delete/" target="_blank" title="Delete Icons">Noun Project</a>  
+
+
+noun-favourite-5029367  favourite by Arkinasi from <a href="https://thenounproject.com/browse/icons/term/favourite/" target="_blank" title="favourite Icons">Noun Project</a>
+
+
+
+
+
+
+
 AATROX
 
 AKALI

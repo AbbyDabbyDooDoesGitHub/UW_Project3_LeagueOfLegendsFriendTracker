@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- LINK MAIN JAVASCRIPT -->
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="./JS/script_all-projects.js"></script>
 
   </head>
 
@@ -90,14 +90,14 @@
               <li><a class="nav-a" href="/payment">Donate</a></li>
   
               <!-- IF NOT LOGGED IN -->
-              <li><a class="nav-a modal-trigger" href="#account-creation-modal">Create Account</a></li>
+              <li><a class="nav-a" href="/payment">Create Account</a></li>
   
               <!-- IF LOGGED IN -->
               <!-- <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li> -->
   
               <!-- IF NOT LOGGED IN -->
-              <li><button class="btn navBtn modal-trigger" id="navBar-signIn" href="#sign-in-modal">Sign In</button></li>
-
+              <li><button class="btn navBtn" id="navBar-signIn">Sign In</button></li>
+  
             </ul>
           </div>
         </nav>
@@ -119,99 +119,7 @@
       </div>
 
 
-
-      <!-- MODAL FOR SIGN IN -->
-      <div id="sign-in-modal" class="modal">
-        <div class="modal-content">
-          <h4>Sign into Existing Account</h4>
-
-          <div class="linkToOtherModal-div">
-            <p>No account yet?</p> 
-            <a class="modal-trigger modal-close" href="#account-creation-modal">Click here to Create an Account</a>
-          </div>
-
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Username</label>
-                </div>
-
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Password</label>
-                </div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <div class="modal-footer-linksDiv">
-            <a href="#!" class="modal-close waves-effect btn-flat modal-footer-cancel">CANCEL</a>
-            <a href="#!" class="modal-close waves-effect btn-flat">Sign In</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- MODAL FOR ACCOUNT CREATION -->
-      <div id="account-creation-modal" class="modal">
-        <div class="modal-content">
-          <h4>Create a New Account</h4>
-
-          <div class="linkToOtherModal-div">
-            <p>Already have an Account?</p> 
-            <a class="modal-trigger modal-close" href="#sign-in-modal">Click here to Sign In</a>
-          </div>
-
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Username</label>
-                </div>
-
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-message-4869933--dkPurple.png" alt="email icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Email</label>
-                </div>
-
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Password</label>
-                </div>
-                
-                <div class="input-field col s12">
-                  <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                  <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                  <label for="icon_prefix2">Re-Enter Password</label>
-                </div>
-
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <div class="modal-footer-linksDiv">
-            <a href="#!" class="modal-close waves-effect btn-flat modal-footer-cancel">CANCEL</a>
-            <a href="#!" class="modal-close waves-effect btn-flat">Create Account & Sign In</a>
-          </div>
-        </div>
-      </div>
   
-
-
       <!-- ABOUT US -->
       <div id="aboutUs-div">
         <div id="aboutUs-div-content">
@@ -278,8 +186,7 @@
             <a href="/payment">Donate</a>
 
             <!-- IF NOT LOGGED IN -->
-            <a class="modal-trigger" href="#account-creation-modal">Create Account</a>
-            <a class="modal-trigger" href="#sign-in-modal">Sign In</a>
+            <a href="/createAccount">Create Account</a>
 
             <!-- IF LOGGED IN -->
             <!-- <a class="nav-a" href="/friendsHome">My Friends</a> -->

@@ -5,6 +5,7 @@
   --mdBlue:         #5271ff;
   --ltPurple:       #a6a2ff;
   --ltGrey:         #cdcdcd;
+  --mdGrey:         #636363;
   --ltYellow:       #fff6a2;
   --white:          #ffffff;
   --dkPurple:       #130039;
@@ -193,6 +194,76 @@ footer {
 .footer-icon {
   margin: 10px;
   height: 70px;
+}
+
+
+/* MODAL STYLING ----------------------------- */
+.modal {
+  background-color: var(--white);
+  margin: auto;
+  margin-top:70px;
+  text-align: center;
+}
+
+.modal-content {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.modal-content h4 {
+  font-size: 30px;
+  font-family: var(--font-subtitle);
+  color: var(--dkPurple);
+}
+
+.linkToOtherModal-div {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+.linkToOtherModal-div a {
+  padding-left: 5px;
+  color: var(--mdBlue);
+}
+
+.modal .material-icons {
+  margin-left: 5px;
+  width: 30px;
+}
+
+textarea.materialize-textarea:focus:not([read-only]) {
+  border-bottom: 1px solid var(--mdPurple);
+  box-shadow: 0 1px solid var(--mdPurple);
+}
+
+textarea.materialize-textarea:focus:not([read-only])+label {
+  color: var(--mdPurple);
+}
+
+.modal-footer-linksDiv {
+  padding-right: 50px;
+}
+
+.modal-footer a {
+  color: var(--white);
+  background-color: var(--mdBlue);
+}
+
+.modal-footer-linksDiv .modal-footer-cancel {
+  margin-right: 200px;
+  color: var(--mdGrey);
+  background-color: var(--ltGrey);
+}
+
+.modal-footer-linksDiv a:hover {
+  opacity: 1;
+  background-color: var(--mdPurple);
+}
+
+
+.modal-footer-linksDiv .modal-footer-cancel:hover {
+  color: var(--dkPurple);
+  background-color: var(--ltPurple);
 }
 
 
