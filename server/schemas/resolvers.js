@@ -51,10 +51,10 @@ const resolvers = {
     addAccount: async (parent, { gamerName, gameNote }, context) => {
       if (context.user) {
         const account = await Account.create({
-          gameName,
+          gamerName,
           gameNote,
           
-          author: context.user.username,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -87,7 +87,7 @@ const resolvers = {
       if (context.user) {
         const account = await Account.findOneAndDelete({
           _id: accountId,
-          author: context.user.username,
+          username: context.user.username,
         });
 
         await User.findOneAndUpdate(
@@ -107,7 +107,7 @@ const resolvers = {
             $pull: {
               friends: {
                 _id: friendId,
-                friendName: context.user.username,
+                username: context.user.username,
               },
             },
           },

@@ -25,12 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ACCOUNT = gql`
-  mutation addAccount($gamerName: String!, $gameNote: string!) {
+  mutation addAccount($gamerName: String!, $gameNote: String!) {
     addAccount(gamerName: $gamerName, gameNote: $gameNote) {
       _id
       gamerName
       gameNote
-    author
+    
       createdAt
       friends {
         _id
@@ -47,7 +47,7 @@ export const ADD_FRIEND = gql`
       _id
       gamerName
       gameNote
-    author
+    
       createdAt
       friends {
         _id

@@ -153,16 +153,16 @@ const AccountForm = () => {
         });
       } catch (e) {
         console.error(e);
-      }
+      };
 
-      // update me object's cache
-      // const { me } = cache.readQuery({ query: QUERY_ME });
-      // cache.writeQuery({
-      //   query: QUERY_ME,
-      //   data: { me: { ...me, accounts: [...me.accounts, addAccount] } },
-      // });
-    },
-  });
+   // update me object's cache
+   const { me } = cache.readQuery({ query: QUERY_ME });
+   cache.writeQuery({
+     query: QUERY_ME,
+     data: { me: { ...me, accounts: [...me.accounts, addAccount] } },
+   });
+ },
+});
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -172,7 +172,7 @@ const AccountForm = () => {
         variables: {
           gamerName,
           gameNote,
-          author: Auth.getProfile().data.username,
+          username: Auth.getProfile().data.username,
         },
       });
 
@@ -248,7 +248,9 @@ const AccountForm = () => {
                 {error.message}
               </div>
             )}
+            
           </form>
+         
         </>
       ) : (
         <p>
