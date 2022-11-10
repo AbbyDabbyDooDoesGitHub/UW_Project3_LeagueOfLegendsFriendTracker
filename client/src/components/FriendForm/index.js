@@ -33,6 +33,7 @@ const FriendForm = ({ accountId }) => {
 
       setFriendName('');
       setFriendNote('');
+      window.location.replace("/friends/"+data.addFriend._id)
     } catch (err) {
       console.error(err);
     }
