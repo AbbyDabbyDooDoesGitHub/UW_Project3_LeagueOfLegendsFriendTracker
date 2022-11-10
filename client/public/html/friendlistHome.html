@@ -58,7 +58,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- LINK MAIN JAVASCRIPT -->
-    <script type="text/javascript" src="./JS/script_all-projects.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 
   </head>
 
@@ -80,24 +80,16 @@
   
             <ul class="right" id="navBar-linksDiv">
   
-              <!-- <li><a class="nav-a" href="/home">Home</a></li> -->
+              <li><a class="nav-a" href="./home.html">Home</a></li>
   
-              <!-- IF LOGGED IN -->
-              <!-- <li> <a class="nav-a" href="/friendsHome">My Friends</a></li> -->
-  
-              <li><a class="nav-a" href="/meetTheDevs">Meet the Devs</a></li>
+              <li><a class="nav-a" href="./meet-devs.html">Meet the Devs</a></li>
 
-              <li><a class="nav-a" href="/payment">Donate</a></li>
-  
-              <!-- IF NOT LOGGED IN -->
-              <li><a class="nav-a" href="/payment">Create Account</a></li>
+              <li><a class="nav-a" href="./payment.html">Donate</a></li>
   
               <!-- IF LOGGED IN -->
-              <!-- <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li> -->
-  
-              <!-- IF NOT LOGGED IN -->
-              <li><button class="btn navBtn" id="navBar-signIn">Sign In</button></li>
-  
+              <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li>
+
+              <!-- THIS PAGE SHOULD NOT BE ACCESSIBLE WITHOUT SIGN IN -->
             </ul>
           </div>
         </nav>
@@ -108,93 +100,45 @@
       <!-- BANNER -->
       <div class="marquee-div">
         <ul class="marquee-contents">
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
-          <li><img src="/client/public/img/banner-backgrounds/league-of-legends/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg" height="300px" alt="Banner image" /></li>          
+          <li><img src="/client/public/img/icons/1.png" height="200px" alt="Objective Focused Icon" /></li>
+          <li><img src="/client/public/img/icons/2.png" height="200px" alt="Great Vision Score Icon" /></li>
+          <li><img src="/client/public/img/icons/3.png" height="200px" alt="Reliable Carry Icon" /></li>
+          <li><img src="/client/public/img/icons/4.png" height="200px" alt="Casual Player Icon" /></li>
+          <li><img src="/client/public/img/icons/5.png" height="200px" alt="Competitive Player Icon" /></li>
+          <li><img src="/client/public/img/icons/6.png" height="200px" alt="Big Brain Plays Icon" /></li>
+          <li><img src="/client/public/img/icons/7.png" height="200px" alt="Tilt-Proof Icon" /></li>
+          <li><img src="/client/public/img/icons/8.png" height="200px" alt="Prone To Rage Icon" /></li>
+          <li><img src="/client/public/img/icons/9.png" height="200px" alt="Great Roaming Icon" /></li>
+          <li><img src="/client/public/img/icons/10.png" height="200px" alt="No Map Awareness Icon" /></li>
+          <li><img src="/client/public/img/icons/11.png" height="200px" alt="No Voice Chat Icon" /></li>
+          <li><img src="/client/public/img/icons/12.png" height="200px" alt="Friend IRL Icon" /></li>
+          <li><img src="/client/public/img/icons/13.png" height="200px" alt="Quick to Surrender Icon" /></li>
+          <li><img src="/client/public/img/icons/14.png" height="200px" alt="Never Surrenders Icon" /></li>
+          <li><img src="/client/public/img/icons/15.png" height="200px" alt="Great Duo Laner Icon" /></li>
+          <li><img src="/client/public/img/icons/16.png" height="200px" alt="Loves to Invade Icon" /></li>
+          
+          
+          <li><img src="/client/public/img/icons/1.png" height="200px" alt="Objective Focused Icon" /></li>
+          <li><img src="/client/public/img/icons/2.png" height="200px" alt="Great Vision Score Icon" /></li>
+          <li><img src="/client/public/img/icons/3.png" height="200px" alt="Reliable Carry Icon" /></li>
+          <li><img src="/client/public/img/icons/4.png" height="200px" alt="Casual Player Icon" /></li>
+          <li><img src="/client/public/img/icons/5.png" height="200px" alt="Competitive Player Icon" /></li>
+          <li><img src="/client/public/img/icons/6.png" height="200px" alt="Big Brain Plays Icon" /></li>
+          <li><img src="/client/public/img/icons/7.png" height="200px" alt="Tilt-Proof Icon" /></li>
+          <li><img src="/client/public/img/icons/8.png" height="200px" alt="Prone To Rage Icon" /></li>
+          <li><img src="/client/public/img/icons/9.png" height="200px" alt="Great Roaming Icon" /></li>
+          <li><img src="/client/public/img/icons/10.png" height="200px" alt="No Map Awareness Icon" /></li>
+          <li><img src="/client/public/img/icons/11.png" height="200px" alt="No Voice Chat Icon" /></li>
+          <li><img src="/client/public/img/icons/12.png" height="200px" alt="Friend IRL Icon" /></li>
+          <li><img src="/client/public/img/icons/13.png" height="200px" alt="Quick to Surrender Icon" /></li>
+          <li><img src="/client/public/img/icons/14.png" height="200px" alt="Never Surrenders Icon" /></li>
+          <li><img src="/client/public/img/icons/15.png" height="200px" alt="Great Duo Laner Icon" /></li>
+          <li><img src="/client/public/img/icons/16.png" height="200px" alt="Loves to Invade Icon" /></li>       
         </ul>
       </div>
 
 
-  
-      <!-- ABOUT US -->
-      <div id="aboutUs-div">
-        <div id="aboutUs-div-content">
-  
-          <div id="aboutUs-infoGraphics-heading">
-            <h3 id="aboutUs-infoGraphic-headingText">What is Hawkshot?</h3>
-  
-          </div>
-  
-          <div class="aboutUs-infoGraphics">
-            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_2.png" alt="Banner image" />
 
-            <div class="aboutUs-infoGraphicText-div">
-
-              <p class="aboutUs-infoGraphicText">Have you ever logged in to play a game and realized you have no idea who's in your friendslist?</p>
-
-            </div>
-          </div>
-  
-          <div class="aboutUs-infoGraphics">
-            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_3.png" alt="Banner image" />
-
-            <div class="aboutUs-infoGraphicText-div">
-
-              <p class="aboutUs-infoGraphicText">Maybe you took a chance and accepted an invite from a random player you'd friended, just to realize that even in a low-stakes game mode they can't keep a level head?</p>
-
-            </div>
-          </div>
-  
-          <div class="aboutUs-infoGraphics">
-            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_4.png" alt="Banner image" />
-
-            <div class="aboutUs-infoGraphicText-div">
-
-              <p class="aboutUs-infoGraphicText">This is where Hawkshot comes in! Add friends to your Hawkshot friendslist with notes, alternate names, and connected accounts.</p>
-
-            </div>
-          </div>
-  
-          <div class="aboutUs-infoGraphics">
-            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_6.png" alt="Banner image" />
-
-            <div class="aboutUs-infoGraphicText-div">
-
-              <p class="aboutUs-infoGraphicText">Friended someone because of a joke they made? Note it! Someone carried a game and miraculously accepted your friend request? Note it! Never wonder why you friended someone again.</p>
-
-            </div>
-          </div>
-  
-          <div class="aboutUs-infoGraphics">
-            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_5.png" alt="Banner image" />
-
-            <div class="aboutUs-infoGraphicText-div">
-
-              <p class="aboutUs-infoGraphicText">Make informed choices about who you'll enjoy playing with for your desired game mode, or search your friendslist for a needed position to fill for multiplayer modes. Use Hawkshot to reveal your friendlist.</p>
-
-            </div>
-          </div>
-
-          <div id="aboutUs-infoGraphics-bottomLinks">
-
-            <a href="/meetTheDevs">Meet the Devs</a>
-
-            <a href="/payment">Donate</a>
-
-            <!-- IF NOT LOGGED IN -->
-            <a href="/createAccount">Create Account</a>
-
-            <!-- IF LOGGED IN -->
-            <!-- <a class="nav-a" href="/friendsHome">My Friends</a> -->
-  
-          </div>
-  
-        </div>
-      </div>
 
 
 
