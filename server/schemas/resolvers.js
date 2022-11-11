@@ -140,7 +140,7 @@ const resolvers = {
           { _id: accountId },
           {
             $addToSet: {
-              friends: { friendName, friendNote: context.user.username },
+              friends: {  username: context.user.username,  friendName, friendNote },
             },
           },
           {
