@@ -72,7 +72,7 @@ const resolvers = {
           { _id: accountId },
           {
             $addToSet: {
-              friends: { context,  friendName, friendNote },
+              friends: {  username: context.user.username,  friendName, friendNote },
             },
           },
           {

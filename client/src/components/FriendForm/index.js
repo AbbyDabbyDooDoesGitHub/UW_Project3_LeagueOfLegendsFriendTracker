@@ -33,6 +33,7 @@ const FriendForm = ({ accountId }) => {
 
       setFriendName('');
       setFriendNote('');
+     
     } catch (err) {
       console.error(err);
     }

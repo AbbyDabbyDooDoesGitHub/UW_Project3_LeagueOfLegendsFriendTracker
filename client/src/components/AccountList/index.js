@@ -22,7 +22,7 @@ const AccountList = ({
             <h4 className="card-header bg-success text-light p-2 m-0">
               {showUsername ? (
                 <Link
-                  className="text-light"
+                  className="text-dark"
                   to={`/profiles/${account.gamerName}`}
                 >
                   {account.gamerName} <br />
@@ -44,9 +44,9 @@ const AccountList = ({
             </div>
             <Link
               className="btn btn-light btn-block btn-squared"
-              to={`/friends/${account._id}`}
+              to={`/accounts/${account._id}`}
             >
-              Add a Friend's name to your game account.
+              view your contactlist and add more  Friend
             </Link>
           </div>
         ))}
