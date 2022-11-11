@@ -41,6 +41,17 @@ export const ADD_ACCOUNT = gql`
   }
 `;
 
+export const REMOVE_ACCOUNT = gql`
+  mutation removeAccount($accountId: ID!) {
+    removeAccount(accountId: $accountId) {
+      _id
+        
+      gamerName
+      gameNote
+    }
+  }
+`
+
 export const ADD_FRIEND = gql`
   mutation addFriend($accountId: ID!, $friendName: String!, $friendNote: String!) {
     addFriend(accountId: $accountId, friendName: $friendName, friendNote: $friendNote) {

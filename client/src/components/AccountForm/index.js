@@ -61,7 +61,7 @@ const AccountForm = () => {
   };
   
 
-
+// function to handle input values
   const handleChange = (event) => {
     const { name, value } = event.target;
 
