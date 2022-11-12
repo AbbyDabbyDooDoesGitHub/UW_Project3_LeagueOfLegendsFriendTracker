@@ -108,5 +108,4 @@ const FriendForm = ({ accountId }) => {
     </div>
   );
 };
-
 export default FriendForm;

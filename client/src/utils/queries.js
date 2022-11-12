@@ -24,6 +24,13 @@ export const QUERY_ACCOUNTS = gql`
       gamerName
       gameNote
       createdAt
+      friends {
+        _id
+        
+        friendName
+        friendNote
+        createdAt
+      }
     }
   }
 `;

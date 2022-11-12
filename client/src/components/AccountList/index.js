@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { REMOVE_ACCOUNT } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const AccountList = ({
   accounts,
@@ -9,8 +11,18 @@ const AccountList = ({
 //   showNote = true,
   showUsername = true,
 }) => {
+  const [removeAccount, { error }] = useMutation(REMOVE_ACCOUNT)
   if (!accounts.length) {
     return <h3>No Accounts Yet</h3>;
+  }
+
+  async function deleteHandler(accountId) {
+    // make mutation call
+    const {data} =await  removeAccount({
+      variables: {accountId}
+    })
+
+    window.location.replace('/')
   }
 
   return (
@@ -42,6 +54,7 @@ const AccountList = ({
               <p>{account.gamerName}<br />{account.gameNote}</p>
               {/* <p>{account.gameNote}</p> */}
             </div>
+            <button onClick={() => deleteHandler(account._id)}>Delete</button>
             <Link
               className="btn btn-light btn-block btn-squared"
               to={`/accounts/${account._id}`}
