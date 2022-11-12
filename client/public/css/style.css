@@ -1,14 +1,18 @@
 /* OVERALL COLOR/TEXT VARS ------------------- */
 :root {
 
-  --mdPurple:       #5e17eb;
-  --mdBlue:         #5271ff;
-  --ltPurple:       #a6a2ff;
-  --ltGrey:         #cdcdcd;
-  --mdGrey:         #636363;
-  --ltYellow:       #fff6a2;
   --white:          #ffffff;
   --whiteWTrnsp:    #ffffffbe;
+
+  --ltGrey:         #cdcdcd;
+  --ltYellow:       #fff6a2;
+  --ltBlue:         #50b9ff;
+  --ltPurple:       #a6a2ff;
+
+  --mdGrey:         #636363;
+  --mdBlue:         #5271ff;
+  --mdPurple:       #5e17eb;
+
   --dkPurple:       #130039;
   --dkPurpleWTrnsp: #130039d8;
 
@@ -268,7 +272,6 @@ textarea.materialize-textarea:focus:not([read-only])+label {
   background-color: var(--mdPurple);
 }
 
-
 .modal-footer-linksDiv .modal-footer-cancel:hover {
   color: var(--dkPurple);
   background-color: var(--ltPurple);
@@ -473,6 +476,95 @@ padding-top: 10px;
   background-color: var(--mdPurple);
 }
 
+#addFriend-saveLink:hover {
+  opacity: 1;
+  background-color: var(--mdBlue);
+}
+
+#addFriend-cancelLink:hover {
+  opacity: 1;
+  color: var(--ltPurple);
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+  background-color: var(--ltPurple);
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+  background-color: var(--mdPurple);
+}
+
+#friendIRL-switchLabel {
+
+  color: var(--dkPurple);
+
+}
+
+#addFriend-switchDiv {
+  float: left;
+  padding-top: 13px;
+  padding-left: 325px;
+}
+
+.addFriend-prefixIcons {
+  float:left;
+  margin-left: 5px;
+  width: 30px;
+  max-height: 35px;
+}
+
+.addFriend-mainText {
+  margin-left: 45px;
+
+  color: var(--dkPurple);
+}
+
+label.addFriend-mainText {
+  font-size: 18px;
+  color: var(--mdGrey);
+}
+
+.dropdown-trigger {
+  margin-left: 10px;
+  padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+
+  padding-left: 0px;
+  color: var(--dkPurple);
+  background-color: #00000000;
+}
+
+.dropdown-trigger:hover {
+  opacity: 1;
+  color: var(--mdBlue);
+  background-color: #00000000;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+  text-align: center;
+  color: var(--dkPurple);
+}
+
+#addFriend-textarea-1 {
+  float: left;
+  margin-left: 10px;
+}
+
+#addFriend-textarea-2 {
+  float: left;
+  margin-left: 10px;
+}
+
+.addFriend-textarea-div {
+  display: inline-flex;
+}
+
+#addFriend-platformDropdown {
+  min-width: 200px;
+}
+
 /* ADD FRIEND MARGINS ------------------------- */
 #addFriend-marginDiv-left {
   width: 20%;
@@ -484,7 +576,7 @@ padding-top: 10px;
 
 .addFriend-marginImg {
   position: relative;
-  top: 150px;
+  top: 125px;
   left: 10%;
 
   border: 4px solid var(--dkPurpleWTrnsp);

@@ -59,6 +59,8 @@
 
     <!-- LINK MAIN JAVASCRIPT -->
     <script type="text/javascript" src="../js/script.js"></script>
+    <!-- LINK MARGIN IMG JAVASCRIPT -->
+    <script type="text/javascript" src="../js/margin-img.js"></script>
 
   </head>
 
@@ -117,7 +119,7 @@
 
           <div id="addFriend-marginDiv-left">
 
-            <img class="addFriend-marginImg" id="addFriend-marginImg-LEFT" src="/client/public/img/icons/22.png" alt="Banner image" />
+            <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="/client/public/img/icons/22.png" alt="Banner image" />
 
           </div>
 
@@ -144,28 +146,59 @@
                 <div class="row">
                   <form class="col s12">
                     <div class="row">
+
                       <div class="input-field col s12">
-                        <img class="material-icons prefix" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Platform Name - Make dropdown - needs to bee added to model</label>
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
+                        <label class="addFriend-mainText">
+                          Do you know this person in real life? 
+                        </label>
+                        <!-- Switch -->
+                        <div class="switch" id="addFriend-switchDiv">
+                          <label id="friendIRL-switchLabel">
+                            NO
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                            YES
+                          </label>
+                        </div>
                       </div>
+
+
+
+                      <div class="input-field col s12">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
+                        <label class="addFriend-mainText">
+                          Select the Platform Name for this Friend:
+                          <!-- add selectedDropdown class to the below link after option selected -->
+                          <a class='dropdown-trigger selectedDropdown' href='#' data-target='addFriend-platformDropdown'>
+                            Select Platform Here
+                          </a>
+                        </label>
+                      </div>
+
+                      <!-- Dropdown Structure -->
+                      <ul id='addFriend-platformDropdown' class='dropdown-content'>
+                        <li><a href="#!">Supported Platform 1</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!">Supported Platform 2</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <!-- <li><a href="#!">Supported Platform 3</a></li>
+                        <li class="divider" tabindex="-1"></li> -->
+                      </ul>
     
-                      <div class="input-field col s12">
-                        <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Friend's Username</label>
+                      <div class="input-field col s12 addFriend-textarea-div">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <textarea class="materialize-textarea" id="addFriend-textarea-1"></textarea>
+                        <label for="icon_prefix2" class="addFriend-mainText">Friend's Username</label>
                       </div>
 
-                      <div class="input-field col s12">
-                        <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Do you know this person IRL? - Boolean - needs to be added to model</label>
-                      </div>
-
-                      <div class="input-field col s12">
-                        <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Notes - Make this a textarea</label>
+                      <div class="input-field col s12 addFriend-textarea-div">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        
+                        <textarea class="materialize-textarea" id="addFriend-textarea-2"></textarea>
+                        <label for="icon_prefix2" class="addFriend-mainText">Notes</label>
                       </div>
     
                     </div>
@@ -190,7 +223,7 @@
 
           <div id="addFriend-marginDiv-right">
 
-            <img class="addFriend-marginImg" id="addFriend-marginImg-RIGHT" src="/client/public/img/icons/14.png" alt="Banner image" />
+            <img class="addFriend-marginImg" id="addFriend-marginImg-right" src="/client/public/img/icons/12.png" alt="Banner image" />
 
           </div>
 
