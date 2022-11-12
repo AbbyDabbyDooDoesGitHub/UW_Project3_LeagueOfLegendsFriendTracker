@@ -105,9 +105,9 @@ const resolvers = {
           { _id: accountId },
           {
             $pull: {
-              friends: {
-                _id: friendId,
-                username: context.user.username,
+              friends: {friendId
+                // _id: friendId,
+                // username: context.user.username,
               },
             },
           },
