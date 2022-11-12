@@ -19,7 +19,9 @@ html {
  */
 body {
   margin: 0;
- background-image: url('img/purpleVectorMirrored.png')
+  background-image: url('img/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /**
@@ -27,6 +29,11 @@ body {
  */
 main {
   display: block;
+ background-image: url('img/purpleVectorMirrored.png');
+  border-radius: 10%;
+}
+header{
+  background-image: url('img/purpleVectorMirrored.png');
 }
 
 /**
