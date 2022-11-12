@@ -773,15 +773,23 @@ label.addFriend-mainText {
 
 
 
-
-
-
-
-
-
 /* RIGHT DIV */
 #friendlist-right-div {
   width: 70%;
 
   /* background-color: var(--ltGrey); */
+}
+
+#friendlist-header-addNew {
+  margin-top: 4px;
+  margin-right: 15px;
+  float: right;
+
+  background-color: var(--mdBlue);
+}
+
+#friendlist-header-addNew:hover {
+  opacity: 1;
+  color: var(--mdGrey);
+  background-color: var(--ltYellow);
 }
