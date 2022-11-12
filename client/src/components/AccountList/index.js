@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { REMOVE_ACCOUNT } from '../../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const AccountList = ({
   accounts,
@@ -9,8 +11,18 @@ const AccountList = ({
 //   showNote = true,
   showUsername = true,
 }) => {
+  const [removeAccount, { error }] = useMutation(REMOVE_ACCOUNT)
   if (!accounts.length) {
     return <h3>No Accounts Yet</h3>;
+  }
+
+  async function deleteHandler(accountId) {
+    // make mutation call
+    const {data} =await  removeAccount({
+      variables: {accountId}
+    })
+
+    window.location.replace('/')
   }
 
   return (
@@ -19,13 +31,13 @@ const AccountList = ({
       {accounts &&
         accounts.map((account) => (
           <div key={account._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+            <h4 className="card-header bg-success text-light p-2 m-0">
               {showUsername ? (
                 <Link
-                  className="text-light"
-                  to={`/profiles/${account.username}`}
+                  className="text-dark"
+                  to={`/profiles/${account.gamerName}`}
                 >
-                  {account.username} <br />
+                  {account.gamerName} <br />
                   <span style={{ fontSize: '1rem' }}>
                     created this game account on {account.createdAt}
                   </span>
@@ -42,11 +54,12 @@ const AccountList = ({
               <p>{account.gamerName}<br />{account.gameNote}</p>
               {/* <p>{account.gameNote}</p> */}
             </div>
+            <button  className="btn btn-light btn-block btn-squared" onClick={() => deleteHandler(account._id)}>Delete</button>
             <Link
-              className="btn btn-light btn-block btn-squared"
-              to={`/friends/${account._id}`}
+              className="btn btn-bg-success- btn-block btn-squared"
+              to={`/accounts/${account._id}`}
             >
-              Add a Friend's name to your game account.
+              view your contact list and add more  Friend
             </Link>
           </div>
         ))}

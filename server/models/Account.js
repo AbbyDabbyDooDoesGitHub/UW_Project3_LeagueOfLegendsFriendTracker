@@ -14,11 +14,11 @@ const accountSchema = new Schema({
     required: true,
     trim: true,
   },
-  author: {
-    type: String,
-    required: true,
+  // author: {
+  //   type: String,
+  //   required: true,
    
-  },
+  // },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -36,11 +36,11 @@ const accountSchema = new Schema({
         type: String,
         required: true,
       },
-      author: {
-        type: String,
-        required: true,
+      // author: {
+      //   type: String,
+      //   required: true,
        
-      },
+      // },
       createdAt: {
         type: Date,
         default: Date.now,

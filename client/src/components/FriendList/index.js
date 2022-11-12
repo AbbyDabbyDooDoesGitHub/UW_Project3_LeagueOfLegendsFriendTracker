@@ -1,10 +1,23 @@
 import React from 'react';
+// import { QUERY_ME} from "../../utils/queries"
+import { useMutation } from '@apollo/client';
+// import { QUERY_SINGLE_ACCOUNT } from '../utils../queries';
+import { REMOVE_FRIEND} from '../../utils/mutations';
+// import { QUERY_ACCOUNTS, QUERY_ME, QUERY_USER } from '../../utils/queries';
 
 const FriendList = ({ friends = [] }) => {
+  const [removeFriend, { error }] = useMutation(REMOVE_FRIEND)
   if (!friends.length) {
     return <h3>No Friends added Yet</h3>;
   }
+  async function deleteHandler( accountId, friendId) {
+    // make mutation call
+    const {data} =await  removeFriend({
+      variables: {  accountId, friendId}
+    })
 
+    window.location.replace('/accounts/:accountId')
+  }
   return (
     <>
       <h3
@@ -19,13 +32,15 @@ const FriendList = ({ friends = [] }) => {
             <div key={friend._id} className="col-12 mb-3 pb-3">
               <div className="p-3 bg-dark text-light">
                 <h5 className="card-header">
-                  {friend.author} added{' '}
+                   added{' '}
                   <span style={{ fontSize: '0.825rem' }}>
                     on {friend.createdAt}
                   </span>
                 </h5>
-                <p className="card-body">{friend.friendNamet}<br />{friend.friendNote}</p>
+                <p className="card-body">{friend.friendName}<br />
+                {friend.friendNote}</p>
               </div>
+              <button  className="btn btn-light btn-block btn-squared" onClick={() => deleteHandler(friend._id)}>Delete </button>
             </div>
           ))}
       </div>

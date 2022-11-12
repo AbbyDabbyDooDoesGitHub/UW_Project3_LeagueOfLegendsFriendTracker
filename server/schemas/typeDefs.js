@@ -6,9 +6,8 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    Accounts: [Account]!
+    accounts: [Account]!
   }
-
   type Account {
     _id: ID
     gameNote: String
@@ -16,19 +15,16 @@ const typeDefs = gql`
     createdAt: String
     friends: [Friend]!
   }
-
   type Friend {
     _id: ID
     friendName: String
     friendNote: String
     createdAt: String
   }
-
   type Auth {
     token: ID!
     user: User
   }
-
   type Query {
     users: [User]
     user(username: String!): User
@@ -36,7 +32,6 @@ const typeDefs = gql`
     account(accountId: ID!): Account
     me: User
   }
-
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth

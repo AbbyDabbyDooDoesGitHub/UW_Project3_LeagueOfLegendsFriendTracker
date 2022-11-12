@@ -33,6 +33,10 @@ const FriendForm = ({ accountId }) => {
 
       setFriendName('');
       setFriendNote('');
+
+     
+
+     
     } catch (err) {
       console.error(err);
     }
@@ -41,10 +45,13 @@ const FriendForm = ({ accountId }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'friendName' && 'friendNote' && value.length <= 280) {
+    if (name === 'friendName' && value.length <= 280) {
       setFriendName(value);
-      setFriendNote(value);
+      // setFriendNote(value);
       setCharacterCount(value.length);
+    }else  if( name === "friendNote" && value.length <= 280 ){
+       setFriendNote(value);
+
     }
   };
 
@@ -101,5 +108,4 @@ const FriendForm = ({ accountId }) => {
     </div>
   );
 };
-
 export default FriendForm;
