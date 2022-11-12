@@ -7,19 +7,22 @@ import { REMOVE_FRIEND} from '../../utils/mutations';
 // import { QUERY_ACCOUNTS, QUERY_ME, QUERY_USER } from '../../utils/queries';
 
 const FriendList = ({ friends = [] }) => {
-  const { accountId } = useParams();
+
   const [removeFriend, { error }] = useMutation(REMOVE_FRIEND)
   if (!friends.length) {
     return <h3>No Friends added Yet</h3>;
   }
-  async function deleteHandler( friendId) {
+
+  async function deleteHandler( accountId, friendId) {
+
     // make mutation call
     const {data} =await  removeFriend({
       variables: {  accountId, friendId}
     })
+
     window.location.reload();
 
-    // window.location.replace('/accounts/:accountId')
+   
   }
   return (
     <>
