@@ -54,12 +54,12 @@ const AccountList = ({
               <p>{account.gamerName}<br />{account.gameNote}</p>
               {/* <p>{account.gameNote}</p> */}
             </div>
-            <button onClick={() => deleteHandler(account._id)}>Delete</button>
+            <button  className="btn btn-light btn-block btn-squared" onClick={() => deleteHandler(account._id)}>Delete</button>
             <Link
-              className="btn btn-light btn-block btn-squared"
+              className="btn btn-bg-success- btn-block btn-squared"
               to={`/accounts/${account._id}`}
             >
-              view your contactlist and add more  Friend
+              view your contact list and add more  Friend
             </Link>
           </div>
         ))}

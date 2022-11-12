@@ -54,7 +54,8 @@ const AccountForm = () => {
       setGameNote('');
 
       // logic to redirect user to /accounts/accountId
-      window.location.replace("/accounts/"+data.addAccount._id)
+     window.location.replace('/me')
+      // window.location.replace("/accounts/"+data.addAccount._id)
     } catch (err) {
       console.error(err);
     }

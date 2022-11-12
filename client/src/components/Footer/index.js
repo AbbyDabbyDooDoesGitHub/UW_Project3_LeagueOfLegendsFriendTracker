@@ -10,9 +10,9 @@ const Footer = () => {
         {location.pathname !== '/' && (
           <button
             className="btn btn-light mb-3"
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/')}
           >
-            &larr; Go Back
+            &larr; Home
           </button>
         )}
        
