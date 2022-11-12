@@ -22,7 +22,7 @@ const FriendForm = ({ accountId }) => {
           accountId,
           friendName,
           friendNote,
-          author: Auth.getProfile().data.username,
+          username: Auth.getProfile().data.username,
         },
       });
     //   setFriendName('');

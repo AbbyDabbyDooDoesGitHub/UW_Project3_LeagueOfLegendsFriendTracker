@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 // import { QUERY_ME} from "../../utils/queries"
 import { useMutation } from '@apollo/client';
 // import { QUERY_SINGLE_ACCOUNT } from '../utils../queries';
@@ -6,17 +7,22 @@ import { REMOVE_FRIEND} from '../../utils/mutations';
 // import { QUERY_ACCOUNTS, QUERY_ME, QUERY_USER } from '../../utils/queries';
 
 const FriendList = ({ friends = [] }) => {
+
   const [removeFriend, { error }] = useMutation(REMOVE_FRIEND)
   if (!friends.length) {
     return <h3>No Friends added Yet</h3>;
   }
+
   async function deleteHandler( accountId, friendId) {
+
     // make mutation call
     const {data} =await  removeFriend({
       variables: {  accountId, friendId}
     })
 
-    window.location.replace('/accounts/:accountId')
+    window.location.reload();
+
+   
   }
   return (
     <>
