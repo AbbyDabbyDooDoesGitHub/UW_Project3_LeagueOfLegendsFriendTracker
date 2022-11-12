@@ -6,13 +6,13 @@
 
   --ltGrey:         #cdcdcd;
   --ltYellow:       #fff6a2;
-  --ltBlue:         #50b9ff;
   --ltPurple:       #a6a2ff;
 
   --mdGrey:         #636363;
   --mdBlue:         #5271ff;
   --mdPurple:       #5e17eb;
 
+  --dkBlue:         #000639d8;
   --dkPurple:       #130039;
   --dkPurpleWTrnsp: #130039d8;
 
@@ -699,14 +699,89 @@ label.addFriend-mainText {
   display: inline-flex;
 }
 
+
+/* LEFT DIV */
 #friendlist-left-div {
-  width: 35%;
-  padding: 45px;
-  background-color: var(--ltYellow);
+  width: 30%;
+
+  /* background-color: var(--dkBlue); */
 }
 
+#friendlist-header-left {
+  width: 100%;
+  height: 60px;
+  background-color: var(--dkBlue);
+}
+
+#friendlist-header-left h3 {
+  padding: 0;
+  padding-top: 20px;
+  margin: 0;
+  margin-top: 4px;
+
+  text-align: center;
+  font-size: 25px;
+  color: var(--ltYellow);
+  font-family: var(--font-subtitle);
+}
+
+#friendlist-header-inside-left {
+  height: 45px;
+  margin-top: 0px;
+  padding: 12px;
+
+
+  font-size: 18px;
+  background-color: var(--mdBlue);
+}
+
+.friendlist-achievement {
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  border-radius: 45px;
+  padding: 15px;
+  display: inline-flex;
+
+  background-color: var(--dkBlue);
+}
+
+.friendlist-achievement-icon {
+  border-radius: 35px;
+  height: 70px;
+}
+
+.friendlist-achievement-textDiv {
+  padding-left: 20px;
+}
+
+.friendlist-achievement-title {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 22px;
+  font-family: var(--font-subtitle);
+  color: var(--mdBlue);
+}
+
+.friendlist-achievement-subtitle {
+  margin: 0;
+  font-size: 18px;
+  /* font-family: var(--font-logoFont); */
+  color: var(--ltPurple);
+}
+
+
+
+
+
+
+
+
+
+/* RIGHT DIV */
 #friendlist-right-div {
-  width: 65%;
-  padding: 45px;
-  background-color: var(--ltGrey);
+  width: 70%;
+
+  /* background-color: var(--ltGrey); */
 }
