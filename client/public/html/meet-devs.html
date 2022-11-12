@@ -23,22 +23,12 @@
     <!-- GOOGLE FONT LINKS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- GOOGLE FONT LINK FOR FONT 'Poiret One' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"> -->
-    <!-- GOOGLE FONT LINK FOR FONT 'Marck Script' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet"> -->
-    <!-- GOOGLE FONT LINK FOR FONT 'Rajdhani' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap" rel="stylesheet"> -->
-    <!-- GOOGLE FONT LINK FOR FONT 'Satisfy' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> -->
-    <!-- GOOGLE FONT LINK FOR FONT 'Press Start 2P' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
-    <!-- GOOGLE FONT LINK FOR FONT 'El Messiri' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet"> -->
     <!-- GOOGLE FONT LINK FOR FONT 'Quantico' -->
     <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
-    <!-- GOOGLE FONT LINK FOR FONT 'Electrolize' -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet"> -->
+    <!-- GOOGLE FONT LINK FOR FONT 'Hammersmith One' -->
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT LINK FOR FONT 'Press Start 2P' -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 
     <!-- LINK RESET AND MAIN STYLESHEET -->
     <link rel="stylesheet" href="../css/reset.css" />
@@ -55,43 +45,268 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- LINK MAIN JAVASCRIPT -->
-    <script type="text/javascript" src="./JS/script_all-projects.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
 
   </head>
 
   <body>
+    <div id="container-div">
 
-    <header>
+      <div id="all-non-footer-content-div">
 
-      <nav>
-        <div id="navBar-div">
-          <ul class="left" id="navBar-titleDiv">
-
-            <li><img id="navBar-logo" src="../../public/img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"></li>
-
-            <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
-
-          </ul>
-
-          <ul class="right" id="navBar-linksDiv">
-
-            <!-- <li> <a class="nav-a" href="/">About Us</a></li> -->
-            <!-- <li><a class="nav-a" href="/home">Home</a></li> -->
-            <li> <a class="nav-a" href="/friendsHome">My Friends</a></li>
-            <li><a class="nav-a" href="/payment">Donate</a></li>
-
-            <!-- {{#if logged_in}} -->
-            <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li>
-            <!-- {{else}} -->
-            <li><button class="btn navBtn" id="navBar-signIn">Sign In</button></li>
-            <!-- <li><a class="nav-a" href="/stripe">Create Account</a></li> -->
-
+        <header>
+          <nav>
+            <div id="navBar-div">
+              <ul class="left" id="navBar-titleDiv">
+    
+                <li><img id="navBar-logo" src="../../public/img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"></li>
+    
+                <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
+    
+              </ul>
+    
+              <ul class="right" id="navBar-linksDiv">
+    
+                <li><a class="nav-a" href="./home.html">Home</a></li>
+    
+                <!-- IF LOGGED IN -->
+                <li> <a class="nav-a" href="./friendlistHome.html">My Friends</a></li>
+  
+                <li><a class="nav-a" href="./payment.html">Donate</a></li>
+    
+                <!-- IF NOT LOGGED IN -->
+                <li><a class="nav-a modal-trigger" href="#account-creation-modal">Create Account</a></li>
+    
+                <!-- IF LOGGED IN -->
+                <!-- <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li> -->
+    
+                <!-- IF NOT LOGGED IN -->
+                <li><button class="btn navBtn modal-trigger" id="navBar-signIn" href="#sign-in-modal">Sign In</button></li>
+  
+              </ul>
+            </div>
+          </nav>
+        </header>
+        
+  
+  
+        <!-- BANNER -->
+        <div class="marquee-div">
+          <ul class="marquee-contents">
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg" height="300px" alt="Banner image" /></li>          
           </ul>
         </div>
-      </nav>
-    </header>
-
-
+  
+  
+  
+        <!-- MODAL FOR SIGN IN -->
+        <div id="sign-in-modal" class="modal">
+          <div class="modal-content">
+            <h4>Sign into Existing Account</h4>
+  
+            <div class="linkToOtherModal-div">
+              <p>No account yet?</p> 
+              <a class="modal-trigger modal-close" href="#account-creation-modal">Click here to Create an Account</a>
+            </div>
+  
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Username</label>
+                  </div>
+  
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Password</label>
+                  </div>
+  
+                </div>
+              </form>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <div class="modal-footer-linksDiv">
+              <a href="#!" class="modal-close waves-effect btn-flat modal-footer-cancel">CANCEL</a>
+              <a href="#!" class="modal-close waves-effect btn-flat">Sign In</a>
+            </div>
+          </div>
+        </div>
+  
+  
+  
+        <!-- MODAL FOR ACCOUNT CREATION -->
+        <div id="account-creation-modal" class="modal">
+          <div class="modal-content">
+            <h4>Create a New Account</h4>
+  
+            <div class="linkToOtherModal-div">
+              <p>Already have an Account?</p> 
+              <a class="modal-trigger modal-close" href="#sign-in-modal">Click here to Sign In</a>
+            </div>
+  
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Username</label>
+                  </div>
+  
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-message-4869933--dkPurple.png" alt="email icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Email</label>
+                  </div>
+  
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Password</label>
+                  </div>
+                  
+                  <div class="input-field col s12">
+                    <img class="material-icons prefix" src="/client/public/img/icons/noun-lock-4969686--dkPurple.png" alt="lock and key icon" />
+                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                    <label for="icon_prefix2">Re-Enter Password</label>
+                  </div>
+  
+                </div>
+              </form>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <div class="modal-footer-linksDiv">
+              <a href="#!" class="modal-close waves-effect btn-flat modal-footer-cancel">CANCEL</a>
+              <a href="#!" class="modal-close waves-effect btn-flat">Create Account & Sign In</a>
+            </div>
+          </div>
+        </div>
     
+  
+  
+        <!-- ABOUT DEVS SECTIONS -->
+        <!-- MEET DEVS -->
+        <div class="meetDevs-div">
+
+          <h3 class="dev-header">Meet the Devs</h3>
+
+          <div class="dev-div dev-div-trnsp">
+            <p class="dev-text dev-text-lastP">This application was developed as a final project after a 6 month coding bootcamp through the University of Washington in 2022. Links for the individual developer GitHub and LinkedIn profiles can be found below.</p>
+          </div>
+
+          <div class="dev-div center">
+            <h4>Abigail Douglas</h4>
+            <p class="dev-text dev-text-lastP">
+              <a target="_blank" href="https://github.com/AbbyDabbyDooDoesGitHub">GitHub</a>
+               - 
+              <a target="_blank" href="https://www.linkedin.com/in/abigailcdouglas/">LinkedIn</a>
+            </p>
+          </div>
+
+          <div class="dev-div center">
+            <h4>Andrew Cha</h4>
+            <p class="dev-text dev-text-lastP">
+              <a target="_blank" href="https://github.com/Jinnywoo">GitHub</a>
+               - 
+              <a target="_blank" href="https://www.linkedin.com/in/andrew-cha-7b728323a/">LinkedIn</a>
+            </p>
+          </div>
+
+          <div class="dev-div center">
+            <h4>Gwanju Chung</h4>
+            <p class="dev-text dev-text-lastP">
+              <a target="_blank" href="https://github.com/thegwanj">GitHub</a>
+               - 
+              <a target="_blank" href="https://www.linkedin.com/in/gwanju-chung/">LinkedIn</a>
+            </p>
+          </div>
+
+          <div class="dev-div center">
+            <h4>Sara Teshome</h4>
+            <p class="dev-text dev-text-lastP">
+              <a target="_blank" href="https://github.com/teshome28sara">GitHub</a>
+               - 
+              <a target="_blank" href="https://www.linkedin.com/in/sara-w-teshome/">LinkedIn</a>
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <!-- ORIGIN OF NAME -->
+        <div class="meetDevs-div">
+
+          <h3 class="dev-header">Origin of the Name</h3>
+
+          <div class="dev-div dev-div-trnsp">
+            <p class="dev-text">
+              While we have ambitions of expanding this application to serve multiple platforms, the initial inspiration was to bring clarity to friendlists in League of Legends. As homage to this, we landed on the name "Hawkshot" for our app. 
+            </p>
+
+            <p class="dev-text">
+              As of the time this app was created, League of Legends has an impressive 162 champions for players to take to battle, but upon release there were just 17. One of these original champions, Ashe, has an unusual "E" ability entirely built for utility. Instead of damaging opponents or healing allies, Ashe uses her hawkshot ability to send a hawk to provide vision in a targeted area. 
+            </p>
+
+            <p class="dev-text dev-text-lastP">
+              Our goal was to bring more clarity to your friendslist, so after sifting through names calling back to warding trinkets and vision scores, we landed on Hawkshot as a satisfying nod to the project.
+            </p>
+          </div>
+
+        </div>
+
+
+
+        <!-- ADDITIONAL ATTRIBUTIONS -->
+        <div class="meetDevs-div">
+
+          <h3 class="dev-header">Additional Attributions</h3>
+
+          <div class="dev-div dev-div-trnsp dev-text-lastP">
+            <p class="dev-text center">
+              See the README.md in our 
+              <a target="_blank" href="https://github.com/AbbyDabbyDooDoesGitHub/UW_Project3_LeagueOfLegendsFriendTracker">GitHub repository</a>
+              for complete attributions for this project.
+            </p>
+          </div>
+
+        </div>
+  
+
+      </div>
+
+
+
+      <footer>
+
+        <div id="footer-div">
+  
+          <p class="footer-text">GOOD LUCK</p>
+  
+          <img class="footer-icon" src="/client/public/img/icons/noun-gaming-4896856--mdBlue.png" alt="headphones with a heart icon" />
+  
+          <p class="footer-text">HAVE FUN</p>
+  
+        </div>
+  
+      </footer>
+
+
+      
+    </div>
+
   </body>
 </html>

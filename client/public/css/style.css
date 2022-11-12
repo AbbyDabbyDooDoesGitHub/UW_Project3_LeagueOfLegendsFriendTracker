@@ -582,3 +582,66 @@ label.addFriend-mainText {
   border: 4px solid var(--dkPurpleWTrnsp);
   width: 80%;
 }
+
+
+
+/* MEET DEVS PAGE ----------------------------- */
+.meetDevs-div {
+  width: 50%;
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  padding: 15px;
+  border-radius: 15px;
+
+  background-color: var(--whiteWTrnsp);
+}
+
+.dev-div {
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px; 
+  border-radius: 15px;
+
+  font-family: var(--font-logoFont);
+  font-size: 18px;
+
+  background-color: var(--whiteWTrnsp);
+}
+
+.dev-div-trnsp {
+
+  background-color: #00000000;
+
+}
+
+.dev-header {
+  margin: auto;
+  font-family: var(--font-subtitle);
+  color: var(--ltYellow);
+
+  text-align: center;
+  font-size: 45px;
+  color: var(--mdPurple);
+  font-family: var(--font-subtitle);
+}
+
+.dev-text {
+  line-height: 1.25;
+  margin-bottom: 25px;
+  color: var(--dkPurple);
+}
+
+.dev-text-lastP {
+
+  margin-bottom: 0px;
+
+}
+
+.dev-div h4 {
+  margin: 0;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
