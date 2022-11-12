@@ -793,3 +793,57 @@ label.addFriend-mainText {
   color: var(--mdGrey);
   background-color: var(--ltYellow);
 }
+
+.friendlist-friend {
+  width: 96%;
+  margin-left: 1.4%;
+  margin-top: 20px;
+  border-radius: 45px;
+  padding: 15px;
+  display: inline-flex;
+
+  background-color: var(--dkPurple);
+}
+
+.friendlist-friend-icon {
+  border-radius: 35px;
+  height: 70px;
+}
+
+.friendlist-friend-textDiv {
+  min-width: 250px;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.friendlist-friend-name {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-family: var(--font-pixels);
+  color: var(--ltYellow);
+}
+
+.friendlist-friend-platform {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-family: var(--font-subtitle);
+  color: var(--mdBlue);
+}
+
+.friendlist-friend-notes {
+  margin: 0;
+  padding-right: 18px;
+  font-size: 18px;
+  /* font-family: var(--font-logoFont); */
+  color: var(--ltPurple);
+}
+
+#friendlist-spacingDiv {
+  width: 100%;
+  height: 35px;
+  /* margin-bottom: 20px; */
+}
