@@ -68,4 +68,20 @@ export const ADD_FRIEND = gql`
       }
     }
   }
-`;
+  
+`
+ 
+ export const REMOVE_FRIEND= gql`
+  mutation removeFriend($accountId: ID!, $friendId: ID!) {
+     removeFriend(accountId: $accountId, friendId: $friendId) {
+      _id
+        
+      friendName
+       friendNote
+       _id
+       
+      
+     }
+  }
+ `
+;
