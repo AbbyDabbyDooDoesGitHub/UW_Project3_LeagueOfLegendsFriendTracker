@@ -55,7 +55,7 @@ const AccountList = ({
                   </span> */}
             <div className="card-body bg light p-2">  
            
-            <p style={{fontsize: '5rem'}}>{account.gamerName}<br />{account.gameNote}</p> 
+            <p style={{fontsize: '5rem', fontWeight: '900'}}>{account.gamerName}<br />{account.gameNote}</p> 
                   
               {/* <p>{account.gamerName}<br />{account.gameNote}</p> */}
               {/* <p>{account.gameNote}</p> */}

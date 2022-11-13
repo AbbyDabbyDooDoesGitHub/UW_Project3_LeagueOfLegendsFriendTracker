@@ -19,7 +19,7 @@ html {
  */
 body {
   margin: 0;
-  background-image: url('img/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg');
+  background-image: url('img/EVELYNN.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,11 +29,12 @@ body {
  */
 main {
   display: block;
- background-image: url('img/purpleVectorMirrored.png');
+ background-image: url('img/vecteezy_abstract-blue-fluid-wave-banner-template_12389891-2.jpg');
   border-radius: 10%;
 }
 header{
-  background-image: url('img/purpleVectorMirrored.png');
+  background-image: url('img/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg');
+ 
 }
 
 /**
