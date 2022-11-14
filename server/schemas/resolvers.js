@@ -5,7 +5,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('acounts');
+      return User.find().populate('accounts');
     },
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('accounts');
@@ -59,7 +59,7 @@ const resolvers = {
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { accounts: account._id } }
+          { $addToSet: { accounts: account.gamerName } }
         );
 
         return account;

@@ -9,22 +9,27 @@ import AuthService from '../../utils/auth';
 
 const FriendList = ({ friends = [] }) => {
 
-  const [removeFriend, { error }] = useMutation(REMOVE_FRIEND)
+  const [removeFriend, { error }] = useMutation(REMOVE_FRIEND);
   if (!friends.length) {
     return <h3>No Friends added Yet</h3>;
   }
 
   async function deleteHandler(friendId) {
-    const userProfile = AuthService.getProfile()
+    const userProfile = AuthService.getProfile();
     console.log("testing", friendId, userProfile);
     // make mutation call
     const { data } = await removeFriend({
-      variables: { accountId: userProfile.data._id, friendId }
-    })
-    console.log("data", data);
+      variables: {
+        accountId: userProfile.data._id,
+        friendId,
+        }
+    });
+    //console.log("data", data);
     // window.location.reload();
 
-
+    // Temp Fix
+    const friendCard = document.getElementById('friendCard');
+    friendCard.style.display = 'none';
   }
   return (
     <>
@@ -34,7 +39,7 @@ const FriendList = ({ friends = [] }) => {
       >
         FRIENDS
       </h3>
-      <div className="flex-row my-4">
+      <div id="friendCard" className="flex-row my-4">
         {friends &&
           friends.map((friend) => (
             <div key={friend._id} className="col-12 mb-3 pb-3">

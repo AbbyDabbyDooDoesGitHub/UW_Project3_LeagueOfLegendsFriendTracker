@@ -26,15 +26,15 @@ const accountSchema = new Schema({
   },
   friends: [
     {
+      friendName: {
+        type: String,
+        required: true,
+      },
       friendNote: {
         type: String,
         required: true,
         minlength: 1,
         maxlength: 280,
-      },
-      friendName: {
-        type: String,
-        required: true,
       },
       // author: {
       //   type: String,
