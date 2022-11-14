@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- REPLACE W/NEW PROJECT TAB TITLE -->
+    <title>Hawkshot</title>
+
+    <!-- LINK MATERIALIZE FRAMEWORK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- LINK GOOGLE FONTS -->
+    <!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+
+    <!-- GOOGLE FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONT LINK FOR FONT 'Quantico' -->
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT LINK FOR FONT 'Hammersmith One' -->
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT LINK FOR FONT 'Press Start 2P' -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    
+    <!-- LINK RESET AND MAIN STYLESHEET -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- LINK JQUERY SCRIPT -->
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- LINK MATERIALIZE FRAMEWORK SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- LINK MAIN JAVASCRIPT -->
+    <script type="text/javascript" src="../js/script.js"></script>
+
+  </head>
+
+  <body>
+    <div id="container-div">
+
+      <div id="all-non-footer-content-div">
+
+        <header>
+          <nav>
+            <div id="navBar-div">
+              <ul class="left" id="navBar-titleDiv">
+    
+                <li><img id="navBar-logo" src="../../public/img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"></li>
+    
+                <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
+    
+              </ul>
+    
+              <ul class="right" id="navBar-linksDiv">
+    
+                <li><a class="nav-a" href="./home.html">Home</a></li>
+    
+                <li><a class="nav-a" href="./meet-devs.html">Meet the Devs</a></li>
+  
+                <li><a class="nav-a" href="./payment.html">Donate</a></li>
+    
+                <!-- IF LOGGED IN -->
+                <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li>
+
+                <!-- THIS PAGE SHOULD NOT BE ACCESSIBLE WITHOUT SIGN IN -->
+              </ul>
+            </div>
+          </nav>
+        </header>
+        
+  
+  
+        <!-- BANNER -->
+        <div class="marquee-div">
+          <ul class="marquee-contents">
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/EVELYNN.png" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA_EZREAL_AHRI_MISS-FORTUNE_SYNDRA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/SORAKA.jpg" height="300px" alt="Banner image" /></li>
+            <li><img src="/client/public/img/banner-backgrounds/league-of-legends/TEEMO_YASUO_KINDRED_LILLIA_AHRI_THRESH_CASSIOPEIA_RIVEN_VAYNE_YONE.jpg" height="300px" alt="Banner image" /></li>          
+          </ul>
+        </div>
+  
+  
+  
+        <!-- FRIENDLIST DIV -->
+        <div id="friendlist-div">
+
+
+
+
+          <div id="friendlist-content-div">
+
+            <!-- LEFT DIV -->
+            <div id="friendlist-left-div">
+
+
+              <div id="friendlist-header-left">
+
+                <h3>
+                  My Achievements
+                </h3>
+    
+              </div>
+
+              <div class="center" id="friendlist-header-inside-left">
+
+                <p id="friendlist-header-label-left">
+                  Earn Achievements as you Use Hawkshot
+                </p>
+
+              </div>
+
+
+              <!-- ACHIEVEMENT EXAMPLE -->
+              <div class="friendlist-achievement">
+                <img class="friendlist-achievement-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+
+                <div class="friendlist-achievement-textDiv">
+
+                  <h4 class="friendlist-achievement-title">
+                    Budding Socialite
+                  </h4>
+  
+                  <h5 class="friendlist-achievement-subtitle">
+                    Added 5 Friends
+                  </h5>
+
+                </div>
+              </div>
+
+
+              <!-- ACHIEVEMENT EXAMPLE -->
+              <div class="friendlist-achievement">
+                <img class="friendlist-achievement-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+
+                <div class="friendlist-achievement-textDiv">
+
+                  <h4 class="friendlist-achievement-title">
+                    Novice Author
+                  </h4>
+  
+                  <h5 class="friendlist-achievement-subtitle">
+                    Notes longer than 100 characters on 3+ friends
+                  </h5>
+
+                </div>
+              </div>
+
+
+            </div>
+  
+  
+  
+            <!-- RIGHT DIV -->
+            <div id="friendlist-right-div">
+
+              <div id="friendlist-header">
+
+                <h3>
+                  My Friends
+                </h3>
+    
+    
+                <div id="friendlist-header-inside">
+    
+                  <div class="input-field col s12">
+                    <img class="addFriend-prefixIcons" id="friendlist-header-icon" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                    <label class="addFriend-mainText" id="friendlist-header-label">
+                      Currently viewing friends on
+                      <!-- add selectedDropdown class to the below link after option selected -->
+                      <a class='dropdown-trigger selectedDropdown' id="friendlist-header-dropdown" href='#' data-target='addFriend-platformDropdown'>
+                        Default Platform
+                      </a>
+                    </label>
+                  </div>
+      
+                  <!-- Dropdown Structure -->
+                  <ul id='addFriend-platformDropdown' class='dropdown-content'>
+                    <li><a href="#!">Supported Platform 1</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <li><a href="#!">Supported Platform 2</a></li>
+                    <li class="divider" tabindex="-1"></li>
+                    <!-- <li><a href="#!">Supported Platform 3</a></li>
+                    <li class="divider" tabindex="-1"></li> -->
+                  </ul>
+
+                  <a class="btn" id="friendlist-header-addNew" href='./addFriend.html'>
+                    ADD NEW FRIEND
+                  </a>
+    
+                </div>
+              </div>
+
+              <div id="friendlist-spacingDiv"></div>
+
+
+              <!-- FRIEND EXAMPLE -->
+              <div class="friendlist-friend">
+                <img class="friendlist-friend-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+
+                <div class="friendlist-friend-textDiv">
+                  <h4 class="friendlist-friend-name center">
+                    Hovot
+                  </h4>
+                  <h5 class="friendlist-friend-platform center">
+                    League of Legends
+                  </h5>
+                </div>
+
+                <p class="friendlist-friend-notes">
+                  Glenn IRL - Fun to play with, but doesn't play often - good pick for jungle, but is much better than you so it doesn't really matter what position he plays - can sometimes get him to clash
+                </p>
+              </div>
+
+
+
+              <!-- FRIEND EXAMPLE -->
+              <div class="friendlist-friend">
+                <img class="friendlist-friend-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+
+                <div class="friendlist-friend-textDiv">
+                  <h4 class="friendlist-friend-name center">
+                    RealBrotherJay
+                  </h4>
+                  <h5 class="friendlist-friend-platform center">
+                    League of Legends
+                  </h5>
+                </div>
+
+                <p class="friendlist-friend-notes">
+                  Friended this person because I jokingly said "it's good to see you, Jay!" despite never having talked to him before and he just went along with it as if we'd known each other forever - Fun to play with, and is basically always on - mains jungle, but also plays ADC - good ranked duo or mess around pick because he doesn't take things too seriously
+                </p>
+              </div>
+
+  
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+  
+      </div>
+
+
+
+      <footer>
+
+        <div id="footer-div">
+  
+          <p class="footer-text">GOOD LUCK</p>
+  
+          <img class="footer-icon" src="/client/public/img/icons/noun-gaming-4896856--mdBlue.png" alt="headphones with a heart icon" />
+  
+          <p class="footer-text">HAVE FUN</p>
+  
+        </div>
+  
+      </footer>
+
+
+      
+    </div>
+
+  </body>
+</html>

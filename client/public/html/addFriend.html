@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- REPLACE W/NEW PROJECT TAB TITLE -->
+    <title>Hawkshot</title>
+
+    <!-- LINK MATERIALIZE FRAMEWORK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- LINK GOOGLE FONTS -->
+    <!-- <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    /> -->
+
+    <!-- GOOGLE FONT LINKS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONT LINK FOR FONT 'Quantico' -->
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT LINK FOR FONT 'Hammersmith One' -->
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONT LINK FOR FONT 'Press Start 2P' -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    
+    <!-- LINK RESET AND MAIN STYLESHEET -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- LINK JQUERY SCRIPT -->
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- LINK MATERIALIZE FRAMEWORK SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- LINK MAIN JAVASCRIPT -->
+    <script type="text/javascript" src="../js/script.js"></script>
+    <!-- LINK MARGIN IMG JAVASCRIPT -->
+    <script type="text/javascript" src="../js/margin-img.js"></script>
+
+  </head>
+
+  <body>
+    <div id="container-div">
+
+
+
+      <header>
+        <nav>
+          <div id="navBar-div">
+            <ul class="left" id="navBar-titleDiv">
+  
+              <li><img id="navBar-logo" src="../../public/img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"></li>
+  
+              <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
+  
+            </ul>
+  
+            <ul class="right" id="navBar-linksDiv">
+  
+              <li><a class="nav-a" href="./home.html">Home</a></li>
+  
+              <li><a class="nav-a" href="./meet-devs.html">Meet the Devs</a></li>
+
+              <li><a class="nav-a" href="./payment.html">Donate</a></li>
+  
+              <!-- IF LOGGED IN -->
+              <li><button class="btn navBtn" id="navBar-signOut">Sign Out</button></li>
+
+              <!-- THIS PAGE SHOULD NOT BE ACCESSIBLE WITHOUT SIGN IN -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+        <!-- ADD A FRIEND PAGE CONTENT DIV -->
+        <div id="addFriend-contentDiv">
+
+          <div id="addFriend-marginDiv-left">
+
+            <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="/client/public/img/icons/22.png" alt="Banner image" />
+
+          </div>
+
+
+
+          <div id="addFriend-centerDiv">
+
+            <!-- ADD FRIEND HEADER -->
+            <div id="addFriend-header">
+
+              <a id="addFriend-cancelLink" href="./friendlistHome.html">Return to My Friendslist</a>
+
+              <h3>Add a Friend</h3>
+
+            </div>
+
+
+
+            <!-- ADD A FRIEND FORM -->
+            <div id="addFriend-form">
+
+              <div id="addFriend-form-contentDiv">
+
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+
+                      <div class="input-field col s12">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
+                        <label class="addFriend-mainText">
+                          Do you know this person in real life? 
+                        </label>
+                        <!-- Switch -->
+                        <div class="switch" id="addFriend-switchDiv">
+                          <label id="friendIRL-switchLabel">
+                            NO
+                            <input type="checkbox">
+                            <span class="lever"></span>
+                            YES
+                          </label>
+                        </div>
+                      </div>
+
+
+
+                      <div class="input-field col s12">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
+                        <label class="addFriend-mainText">
+                          Select the Platform Name for this Friend:
+                          <!-- add selectedDropdown class to the below link after option selected -->
+                          <a class='dropdown-trigger selectedDropdown' href='#' data-target='addFriend-platformDropdown'>
+                            Select Platform Here
+                          </a>
+                        </label>
+                      </div>
+
+                      <!-- Dropdown Structure -->
+                      <ul id='addFriend-platformDropdown' class='dropdown-content'>
+                        <li><a href="#!">Supported Platform 1</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!">Supported Platform 2</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <!-- <li><a href="#!">Supported Platform 3</a></li>
+                        <li class="divider" tabindex="-1"></li> -->
+                      </ul>
+    
+                      <div class="input-field col s12 addFriend-textarea-div">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        <textarea class="materialize-textarea" id="addFriend-textarea-1"></textarea>
+                        <label for="icon_prefix2" class="addFriend-mainText">Friend's Username</label>
+                      </div>
+
+                      <div class="input-field col s12 addFriend-textarea-div">
+                        <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                        
+                        <textarea class="materialize-textarea" id="addFriend-textarea-2"></textarea>
+                        <label for="icon_prefix2" class="addFriend-mainText">Notes</label>
+                      </div>
+    
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <div id="addFriend-footer">
+
+              <a id="addFriend-saveLink" href="./friendlistHome.html">SAVE</a>
+
+            </div>
+
+          </div>
+
+
+
+          <div id="addFriend-marginDiv-right">
+
+            <img class="addFriend-marginImg" id="addFriend-marginImg-right" src="/client/public/img/icons/12.png" alt="Banner image" />
+
+          </div>
+
+
+
+        </div>
+
+
+
+      <footer>
+
+        <div id="footer-div">
+
+          <p class="footer-text">GOOD LUCK</p>
+
+          <img class="footer-icon" src="/client/public/img/icons/noun-gaming-4896856--mdBlue.png" alt="headphones with a heart icon" />
+
+          <p class="footer-text">HAVE FUN</p>
+
+        </div>
+
+      </footer>
+
+
+
+    </div>
+  </body>
+</html>

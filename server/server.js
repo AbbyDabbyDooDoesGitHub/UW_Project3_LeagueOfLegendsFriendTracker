@@ -14,7 +14,6 @@ const server = new ApolloServer({
   context: authMiddleware,
 });
 
-// ADD HANDLEBARS
 
 
 app.use(express.urlencoded({ extended: false }));
