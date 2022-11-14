@@ -1,4 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
+const { isConstValueNode } = require('graphql');
 const { User, Account } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -100,13 +101,14 @@ const resolvers = {
       throw new AuthenticationError('You need to be logged in!');
     },
     removeFriend: async (parent, { accountId, friendId }, context) => {
+     console.log(accountId, friendId)
       if (context.user) {
         return Account.findOneAndUpdate(
           { _id: accountId },
           {
             $pull: {
-              friends: {friendId
-                // _id: friendId,
+               friends: {
+                _id: friendId,
                 // username: context.user.username,
               },
             },
