@@ -1,10 +1,12 @@
 import React from 'react'
+// import Auth from '../utils/auth';
 
-import Header from '../../components/Header';
-import Banner from '../../components/Banner';
-import SignInModal from '../../components/SignInModal';
-import NewAccountModal from '../../components/NewAccountModal';
-import Footer from '../../components/Footer';
+// import Header from '../components/Header';
+// import Banner from '../components/Banner';
+// import SignInModal from '../components/SignInModal';
+// import NewAccountModal from '../components/NewAccountModal';
+import Footer from '../components/Footer';
+// import PlatformDropdown from '../components/PlatformDropdown';
 
 export default function MeetDevs() {
 
@@ -17,13 +19,13 @@ export default function MeetDevs() {
 
             <div id="all-non-footer-content-div">
 
-                <Header />
+                {/* <Header />
 
                 <Banner />
 
                 <SignInModal />
 
-                <NewAccountModal />
+                <NewAccountModal /> */}
 
 
 
@@ -44,9 +46,9 @@ export default function MeetDevs() {
                         <h4>Abigail Douglas</h4>
 
                         <p class="dev-text dev-text-lastP">
-                            <a target="_blank" href="https://github.com/AbbyDabbyDooDoesGitHub">GitHub</a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/AbbyDabbyDooDoesGitHub">GitHub</a>
                             - 
-                            <a target="_blank" href="https://www.linkedin.com/in/abigailcdouglas/">LinkedIn</a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/abigailcdouglas/">LinkedIn</a>
                         </p>
 
                     </div>
@@ -56,9 +58,9 @@ export default function MeetDevs() {
                         <h4>Andrew Cha</h4>
 
                         <p class="dev-text dev-text-lastP">
-                            <a target="_blank" href="https://github.com/Jinnywoo">GitHub</a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/Jinnywoo">GitHub</a>
                             - 
-                            <a target="_blank" href="https://www.linkedin.com/in/andrew-cha-7b728323a/">LinkedIn</a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/andrew-cha-7b728323a/">LinkedIn</a>
                         </p>
 
                     </div>
@@ -68,9 +70,9 @@ export default function MeetDevs() {
                         <h4>Gwanju Chung</h4>
 
                         <p class="dev-text dev-text-lastP">
-                            <a target="_blank" href="https://github.com/thegwanj">GitHub</a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/thegwanj">GitHub</a>
                             - 
-                            <a target="_blank" href="https://www.linkedin.com/in/gwanju-chung/">LinkedIn</a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/gwanju-chung/">LinkedIn</a>
                         </p>
 
                     </div>
@@ -80,9 +82,9 @@ export default function MeetDevs() {
                         <h4>Sara Teshome</h4>
 
                         <p class="dev-text dev-text-lastP">
-                            <a target="_blank" href="https://github.com/teshome28sara">GitHub</a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/teshome28sara">GitHub</a>
                             - 
-                            <a target="_blank" href="https://www.linkedin.com/in/sara-w-teshome/">LinkedIn</a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sara-w-teshome/">LinkedIn</a>
                         </p>
 
                     </div>
@@ -124,7 +126,7 @@ export default function MeetDevs() {
                         <p class="dev-text center">
 
                             See the README.md in our 
-                            <a target="_blank" href="https://github.com/AbbyDabbyDooDoesGitHub/UW_Project3_LeagueOfLegendsFriendTracker">GitHub repository</a>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/AbbyDabbyDooDoesGitHub/UW_Project3_LeagueOfLegendsFriendTracker">GitHub repository</a>
                             for complete attributions for this project.
 
                         </p>
@@ -148,7 +150,3 @@ export default function MeetDevs() {
   )
 
 }
-
-
-
-export default MeetDevs;

@@ -16,7 +16,7 @@ const Header = () => {
           <ul class="left" id="navBar-titleDiv">
 
             <Link to="/">
-              <li><img id="navBar-logo" src="../../public/img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"/></li>
+              <li><img id="navBar-logo" src="../img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"/></li>
             </Link>
 
             <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>

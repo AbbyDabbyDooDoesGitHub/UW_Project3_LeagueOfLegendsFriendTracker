@@ -18,6 +18,7 @@ import MeetDevs from './pages/MeetDevs';
 // import components
 import Banner from './components/Banner';
 import Footer from './components/Footer';
+import Header from './components/Header';
 import NewAccountModal from './components/NewAccountModal';
 import PlatformDropdown from './components/PlatformDropdown';
 import SignInModal from './components/SignInModal';
@@ -72,7 +73,15 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           
           <Header />
+
+          <Banner /> 
+
+          <SignInModal />
+
+          <NewAccountModal />
+
           <div className="container">
+            
             <Routes>
               <Route 
                 path="/AddFriend"
@@ -92,10 +101,13 @@ function App() {
               />
           
             </Routes>
+            
           </div>
-          <Footer />
+
         </div>
+
       </Router>
+
     </ApolloProvider>
 
   );

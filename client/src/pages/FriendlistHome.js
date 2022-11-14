@@ -1,10 +1,11 @@
 import React from 'react'
+import Auth from '../utils/auth';
 
-import Header from '../../components/Header';
-import Banner from '../../components/Banner';
-import SignInModal from '../../components/SignInModal';
-import NewAccountModal from '../../components/NewAccountModal';
-import Footer from '../../components/Footer';
+// import Header from '../components/Header';
+// import Banner from '../components/Banner';
+// import SignInModal from '../components/SignInModal';
+// import NewAccountModal from '../components/NewAccountModal';
+import Footer from '../components/Footer';
 import PlatformDropdown from '../components/PlatformDropdown';
 
 export default function FriendlistHome() {
@@ -16,10 +17,10 @@ export default function FriendlistHome() {
         <div id="container-div">
 
             <div id="all-non-footer-content-div">
-
+{/* 
                 <Header />
 
-                <Banner />
+                <Banner /> */}
 
 
 
@@ -45,10 +46,15 @@ export default function FriendlistHome() {
 
                             </div>
 
-                            <!-- ACHIEVEMENT EXAMPLE -->
+
+
+
+
+
+
                             <div class="friendlist-achievement">
                                 
-                                <img class="friendlist-achievement-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+                                <img class="friendlist-achievement-icon" src="../img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
 
                                 <div class="friendlist-achievement-textDiv">
 
@@ -65,10 +71,9 @@ export default function FriendlistHome() {
                             </div>
 
 
-                            <!-- ACHIEVEMENT EXAMPLE -->
                             <div class="friendlist-achievement">
 
-                                <img class="friendlist-achievement-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+                                <img class="friendlist-achievement-icon" src="../img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
 
                                 <div class="friendlist-achievement-textDiv">
 
@@ -83,6 +88,12 @@ export default function FriendlistHome() {
                                 </div>
 
                             </div>
+
+
+
+
+
+
 
                         </div>
 
@@ -100,12 +111,11 @@ export default function FriendlistHome() {
 
                                     <div class="input-field col s12">
                             
-                                        <img class="addFriend-prefixIcons" id="friendlist-header-icon" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                                        <img class="addFriend-prefixIcons" id="friendlist-header-icon" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
                             
                                         <label class="addFriend-mainText" id="friendlist-header-label">
 
                                             Currently viewing friends on
-                                            <!-- add selectedDropdown class to the below link after option selected -->
                                             
                                             <a class='dropdown-trigger selectedDropdown' id="friendlist-header-dropdown" href='#' data-target='addFriend-platformDropdown'>
                                                 Default Platform
@@ -127,10 +137,15 @@ export default function FriendlistHome() {
 
                         
 
-                            <!-- FRIEND EXAMPLE -->
+
+
+
+
+
+
                             <div class="friendlist-friend">
 
-                                <img class="friendlist-friend-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+                                <img class="friendlist-friend-icon" src="../img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
 
                                 <div class="friendlist-friend-textDiv">
                             
@@ -151,10 +166,10 @@ export default function FriendlistHome() {
 
 
 
-                            <!-- FRIEND EXAMPLE -->
+
                             <div class="friendlist-friend">
 
-                                <img class="friendlist-friend-icon" src="/client/public/img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
+                                <img class="friendlist-friend-icon" src="../img/hawkshot-logos/HawkshotLogo-BowOnly-LightBackground.png"/>
 
                                 <div class="friendlist-friend-textDiv">
                             
@@ -172,6 +187,12 @@ export default function FriendlistHome() {
                                 </p>
 
                             </div>
+
+
+
+
+
+
 
                         </div>
 
@@ -194,5 +215,6 @@ export default function FriendlistHome() {
 }
 
 
-
-export default FriendlistHome;
+// TO DO: 
+// Remove static examples and insert dynamic components
+// make "default platform" for dropdown change to the selected platform

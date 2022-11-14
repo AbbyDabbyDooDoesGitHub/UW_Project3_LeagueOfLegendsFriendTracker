@@ -1,10 +1,12 @@
 import React from 'react'
+import Auth from '../utils/auth';
 
-import Header from '../../components/Header';
-import Banner from '../../components/Banner';
-import SignInModal from '../../components/SignInModal';
-import NewAccountModal from '../../components/NewAccountModal';
-import Footer from '../../components/Footer';
+// import Header from '../components/Header';
+// import Banner from '../components/Banner';
+// import SignInModal from '../components/SignInModal';
+// import NewAccountModal from '../components/NewAccountModal';
+import Footer from '../components/Footer';
+// import PlatformDropdown from '../components/PlatformDropdown';
 
 export default function Home() {
 
@@ -16,13 +18,13 @@ export default function Home() {
 
             <div id="all-non-footer-content-div">
 
-                <Header />
+                {/* <Header />
 
                 <Banner />
 
                 <SignInModal />
 
-                <NewAccountModal />
+                <NewAccountModal /> */}
 
 
 
@@ -38,7 +40,7 @@ export default function Home() {
 
                         <div class="aboutUs-infoGraphics">
 
-                            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_2.png" alt="Banner image" />
+                            <img class="aboutUs-infoGraphicImgs" src="../img/backgrounds/about-icon-layouts_2.png" alt="Banner image" />
 
                             <div class="aboutUs-infoGraphicText-div">
 
@@ -50,7 +52,7 @@ export default function Home() {
 
                         <div class="aboutUs-infoGraphics">
 
-                            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_3.png" alt="Banner image" />
+                            <img class="aboutUs-infoGraphicImgs" src="../img/backgrounds/about-icon-layouts_3.png" alt="Banner image" />
 
                             <div class="aboutUs-infoGraphicText-div">
 
@@ -62,7 +64,7 @@ export default function Home() {
 
                         <div class="aboutUs-infoGraphics">
 
-                            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_4.png" alt="Banner image" />
+                            <img class="aboutUs-infoGraphicImgs" src="../img/backgrounds/about-icon-layouts_4.png" alt="Banner image" />
 
                             <div class="aboutUs-infoGraphicText-div">
 
@@ -74,7 +76,7 @@ export default function Home() {
 
                         <div class="aboutUs-infoGraphics">
                             
-                            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_6.png" alt="Banner image" />
+                            <img class="aboutUs-infoGraphicImgs" src="../img/backgrounds/about-icon-layouts_6.png" alt="Banner image" />
 
                             <div class="aboutUs-infoGraphicText-div">
 
@@ -86,7 +88,7 @@ export default function Home() {
 
                         <div class="aboutUs-infoGraphics">
 
-                            <img class="aboutUs-infoGraphicImgs" src="/client/public/img/backgrounds/about-icon-layouts_5.png" alt="Banner image" />
+                            <img class="aboutUs-infoGraphicImgs" src="../img/backgrounds/about-icon-layouts_5.png" alt="Banner image" />
 
                             <div class="aboutUs-infoGraphicText-div">
 
@@ -105,8 +107,6 @@ export default function Home() {
                                     <a href="/MeetDevs">Meet the Devs</a>
 
                                     <a class="nav-a" href="/FriendlistHome">My Friends</a>
-
-                                    <a class="nav-a" href="/" onClick={logout} >Sign Out</a>
 
                                 </>
                             ) : (

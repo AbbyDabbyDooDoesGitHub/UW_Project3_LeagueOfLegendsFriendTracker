@@ -1,10 +1,11 @@
 import React from 'react'
+import Auth from '../utils/auth';
 
-import Header from '../../components/Header';
-import Banner from '../../components/Banner';
-import SignInModal from '../../components/SignInModal';
-import NewAccountModal from '../../components/NewAccountModal';
-import Footer from '../../components/Footer';
+// import Header from '../components/Header';
+// import Banner from '../components/Banner';
+// import SignInModal from '../components/SignInModal';
+// import NewAccountModal from '../components/NewAccountModal';
+import Footer from '../components/Footer';
 import PlatformDropdown from '../components/PlatformDropdown';
 
 export default function AddFriend() {
@@ -15,17 +16,17 @@ export default function AddFriend() {
         <div id="container-div">
 
 
-
-            <Header />
+{/* 
+            <Header /> */}
 
             
 
-            <!-- ADD A FRIEND PAGE CONTENT DIV -->
+            {/* <!-- ADD A FRIEND PAGE CONTENT DIV --> */}
             <div id="addFriend-contentDiv">
 
                 <div id="addFriend-marginDiv-left">
 
-                <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="/client/public/img/icons/22.png" alt="Banner image" />
+                <img class="addFriend-marginImg" id="addFriend-marginImg-left" src="../img/icons/22.png" alt="Banner image" />
 
                 </div>
 
@@ -33,7 +34,7 @@ export default function AddFriend() {
 
                 <div id="addFriend-centerDiv">
 
-                <!-- ADD FRIEND HEADER -->
+                {/* <!-- ADD FRIEND HEADER --> */}
                 <div id="addFriend-header">
 
                     <a id="addFriend-cancelLink" href="./friendlistHome.html">Return to My Friendslist</a>
@@ -44,7 +45,6 @@ export default function AddFriend() {
 
 
 
-                    <!-- ADD A FRIEND FORM -->
                     <div id="addFriend-form">
 
                         <div id="addFriend-form-contentDiv">
@@ -55,19 +55,17 @@ export default function AddFriend() {
 
                                         <div class="input-field col s12">
 
-                                            <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                                            <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
 
-                                            <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
                                             <label class="addFriend-mainText">
                                                 Do you know this person in real life? 
                                             </label>
 
-                                            <!-- Switch -->
                                             <div class="switch" id="addFriend-switchDiv">
 
                                                 <label id="friendIRL-switchLabel">
                                                     NO
-                                                    <input type="checkbox">
+                                                    <input type="checkbox"/>
                                                     <span class="lever"></span>
                                                     YES
                                                 </label>
@@ -80,14 +78,11 @@ export default function AddFriend() {
 
                                         <div class="input-field col s12">
 
-                                            <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                                            <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
 
-                                            <!-- ~~~~~~~~~~~ NEEDS TO BE ADDED TO MODEL ~~~~~~~~~~~ -->
                                             <label class="addFriend-mainText">
 
                                                 Select the Platform Name for this Friend:
-
-                                                <!-- add selectedDropdown class to the below link after option selected -->
 
                                                 <a class='dropdown-trigger selectedDropdown' href='#' data-target='addFriend-platformDropdown'>
                                                 Select Platform Here
@@ -100,7 +95,7 @@ export default function AddFriend() {
 
                                         <div class="input-field col s12 addFriend-textarea-div">
                                         
-                                            <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                                            <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
                                         
                                             <textarea class="materialize-textarea" id="addFriend-textarea-1"></textarea>
                                         
@@ -110,7 +105,7 @@ export default function AddFriend() {
 
                                         <div class="input-field col s12 addFriend-textarea-div">
                                         
-                                            <img class="addFriend-prefixIcons" src="/client/public/img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
+                                            <img class="addFriend-prefixIcons" src="../img/icons/noun-user-4869878--dkPurple.png" alt="user icon" />
                                         
                                             <textarea class="materialize-textarea" id="addFriend-textarea-2"></textarea>
                                         
@@ -142,7 +137,7 @@ export default function AddFriend() {
 
                 <div id="addFriend-marginDiv-right">
 
-                    <img class="addFriend-marginImg" id="addFriend-marginImg-right" src="/client/public/img/icons/12.png" alt="Banner image" />
+                    <img class="addFriend-marginImg" id="addFriend-marginImg-right" src="../img/icons/12.png" alt="Banner image" />
 
                 </div>
 
@@ -165,6 +160,7 @@ export default function AddFriend() {
 
 }
 
-
-
-export default AddFriend;
+// TO DO: 
+// add irl boolean to model
+// add platform to model
+// make "default platform" for dropdown change to the selected platform
