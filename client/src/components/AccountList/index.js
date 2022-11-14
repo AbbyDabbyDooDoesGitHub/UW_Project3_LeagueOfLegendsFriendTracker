@@ -22,7 +22,7 @@ const AccountList = ({
       variables: {accountId}
     })
 
-    window.location.replace('/')
+    window.location.replace('/me')
   }
 
   return (

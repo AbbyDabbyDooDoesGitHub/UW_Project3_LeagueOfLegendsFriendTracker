@@ -17,7 +17,7 @@ const Header = () => {
           <img src={proLogo} className='proLogo' alt="" width='200px' hight='200px'/>
             <h1 className="m-0">Hawkshot</h1>
           </Link>
-          <p className="m-0">💕Create a gamer's contact list💕</p>
+          <p className="m-0 bg-dark text-light">💕Create a gamer's contact list💕</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
@@ -31,10 +31,10 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="btn btn-lg btn-info m-2 bg-dark" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-lg btn-info m-2 bg-dark" to="/signup">
                 Signup
               </Link>
             </>
