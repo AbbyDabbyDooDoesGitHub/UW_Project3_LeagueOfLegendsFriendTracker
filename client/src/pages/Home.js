@@ -7,7 +7,9 @@ import NewAccountModal from '../../components/NewAccountModal';
 import Footer from '../../components/Footer';
 
 export default function Home() {
+
   return (
+
     <React.Fragment>
 
         <div id="container-div">
@@ -94,20 +96,33 @@ export default function Home() {
                             
                         </div>
 
+
                         <div id="aboutUs-infoGraphics-bottomLinks">
 
-                            <a href="./meet-devs.html">Meet the Devs</a>
+                            {Auth.loggedIn() ? (
+                                <>
 
-                            <a href="./payment.html">Donate</a>
+                                    <a href="/MeetDevs">Meet the Devs</a>
 
-                            <!-- IF NOT LOGGED IN -->
-                            <a class="modal-trigger" href="#account-creation-modal">Create Account</a>
-                            <a class="modal-trigger" href="#sign-in-modal">Sign In</a>
+                                    <a class="nav-a" href="/FriendlistHome">My Friends</a>
 
-                            <!-- IF LOGGED IN -->
-                            <a class="nav-a" href="./friendlistHome.html">My Friends</a>
+                                    <a class="nav-a" href="/" onClick={logout} >Sign Out</a>
+
+                                </>
+                            ) : (
+                                <>
+
+                                    <a href="/MeetDevs">Meet the Devs</a>
+
+                                    <a class="modal-trigger" href="#account-creation-modal">Create Account</a>
+
+                                    <a class="modal-trigger" href="#sign-in-modal">Sign In</a>
+
+                                </>
+                            )}
 
                         </div>
+
 
                     </div>
 
@@ -116,13 +131,10 @@ export default function Home() {
             </div>
 
 
-
             <Footer />
 
 
-
         </div>
-
 
 
     </React.Fragment>
@@ -130,7 +142,3 @@ export default function Home() {
   )
 
 }
-
-
-
-export default Home;
