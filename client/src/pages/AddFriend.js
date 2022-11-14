@@ -5,6 +5,7 @@ import Banner from '../../components/Banner';
 import SignInModal from '../../components/SignInModal';
 import NewAccountModal from '../../components/NewAccountModal';
 import Footer from '../../components/Footer';
+import PlatformDropdown from '../components/PlatformDropdown';
 
 export default function home() {
   return (
@@ -95,22 +96,7 @@ export default function home() {
                                             </label>
                                         </div>
 
-                                        <!-- Dropdown Structure -->
-                                        <ul id='addFriend-platformDropdown' class='dropdown-content'>
-
-                                            <li><a href="#!">Supported Platform 1</a></li>
-
-                                            <li class="divider" tabindex="-1"></li>
-
-                                            <li><a href="#!">Supported Platform 2</a></li>
-
-                                            <li class="divider" tabindex="-1"></li>
-
-                                            <!-- <li><a href="#!">Supported Platform 3</a></li>
-
-                                            <li class="divider" tabindex="-1"></li> -->
-
-                                        </ul>
+                                        <PlatformDropdown />
 
                                         <div class="input-field col s12 addFriend-textarea-div">
                                         
