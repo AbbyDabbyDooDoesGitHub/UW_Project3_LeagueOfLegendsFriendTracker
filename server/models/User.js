@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// Model for the user that is using the webapp
 const userSchema = new Schema({
   username: {
     type: String,
