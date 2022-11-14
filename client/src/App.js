@@ -28,17 +28,6 @@ import { ADD_ACCOUNT } from './utils/mutations';
 import FriendlistHome from './pages/FriendlistHome';
 
 
-// import Home from './pages/Home';
-// import Signup from './pages/Signup';
-// import Login from './pages/Login';
-// import SingleAccount from './pages/SingleAccount';
-// import Profile from './pages/Profile';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
-// import FriendList from './components/FriendList';
-// import FriendForm from './components/FriendForm';
-// import { ADD_ACCOUNT } from './utils/mutations';
-// import AccountList from './components/AccountList';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
