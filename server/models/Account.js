@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
+// ???
 const accountSchema = new Schema({
   gameNote: {
     type: String,
@@ -17,7 +18,6 @@ const accountSchema = new Schema({
   // author: {
   //   type: String,
   //   required: true,
-   
   // },
   createdAt: {
     type: Date,
@@ -39,7 +39,6 @@ const accountSchema = new Schema({
       // author: {
       //   type: String,
       //   required: true,
-       
       // },
       createdAt: {
         type: Date,
