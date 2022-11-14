@@ -6,7 +6,7 @@ import SignInModal from '../../components/SignInModal';
 import NewAccountModal from '../../components/NewAccountModal';
 import Footer from '../../components/Footer';
 
-export default function home() {
+export default function Home() {
   return (
     <React.Fragment>
 
@@ -130,3 +130,7 @@ export default function home() {
   )
 
 }
+
+
+
+export default Home;

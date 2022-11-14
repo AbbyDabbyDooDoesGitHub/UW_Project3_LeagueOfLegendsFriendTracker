@@ -6,7 +6,7 @@ import SignInModal from '../../components/SignInModal';
 import NewAccountModal from '../../components/NewAccountModal';
 import Footer from '../../components/Footer';
 
-export default function home() {
+export default function MeetDevs() {
 
   return (
 
@@ -148,3 +148,7 @@ export default function home() {
   )
 
 }
+
+
+
+export default MeetDevs;

@@ -8,17 +8,36 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
+// import pages
+import AddFriend from './pages/AddFriend';
+import friendlistHome from './pages/FriendlistHome';
 import Home from './pages/Home';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import SingleAccount from './pages/SingleAccount';
-import Profile from './pages/Profile';
-import Header from './components/Header';
+import MeetDevs from './pages/MeetDevs';
+
+// import components
+import Banner from './components/Banner';
 import Footer from './components/Footer';
-import FriendList from './components/FriendList';
-import FriendForm from './components/FriendForm';
+import NewAccountModal from './components/NewAccountModal';
+import PlatformDropdown from './components/PlatformDropdown';
+import SignInModal from './components/SignInModal';
+
+// import mutations
 import { ADD_ACCOUNT } from './utils/mutations';
-import AccountList from './components/AccountList';
+import FriendlistHome from './pages/FriendlistHome';
+
+
+// import Home from './pages/Home';
+// import Signup from './pages/Signup';
+// import Login from './pages/Login';
+// import SingleAccount from './pages/SingleAccount';
+// import Profile from './pages/Profile';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import FriendList from './components/FriendList';
+// import FriendForm from './components/FriendForm';
+// import { ADD_ACCOUNT } from './utils/mutations';
+// import AccountList from './components/AccountList';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,7 +64,9 @@ const client = new ApolloClient({
 });
 
 function App() {
+
   return (
+
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
@@ -54,32 +75,20 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/"
+                path="/AddFriend"
+                element={<AddFriend />}
+              />
+              <Route 
+                path="/FriendlistHome" 
+                element={<FriendlistHome />}
+              />
+              <Route 
+                path="/" 
                 element={<Home />}
               />
               <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />}
-              />
-              <Route 
-                path="/me" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/accounts/:accountId" 
-                element={<SingleAccount />}
-              />
-               <Route 
-                path="/friends/:friendId"
-                element={<FriendForm/>}
+                path="/MeetDevs" 
+                element={<MeetDevs />}
               />
           
             </Routes>
@@ -88,7 +97,9 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+
   );
+
 }
 
 export default App;

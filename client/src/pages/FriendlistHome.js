@@ -7,7 +7,7 @@ import NewAccountModal from '../../components/NewAccountModal';
 import Footer from '../../components/Footer';
 import PlatformDropdown from '../components/PlatformDropdown';
 
-export default function home() {
+export default function FriendlistHome() {
   return (
 
     <React.Fragment>
@@ -192,3 +192,7 @@ export default function home() {
   )
 
 }
+
+
+
+export default FriendlistHome;
