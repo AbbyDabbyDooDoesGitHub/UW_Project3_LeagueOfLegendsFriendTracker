@@ -22,7 +22,7 @@ const AccountList = ({
       variables: {accountId}
     })
 
-    window.location.replace('/')
+    window.location.replace('/me')
   }
 
   return (
@@ -50,8 +50,14 @@ const AccountList = ({
                 </>
               )}
             </h4>
-            <div className="card-body bg secondary p-2">
-              <p>{account.gamerName}<br />{account.gameNote}</p>
+            {/* <span style={{ fontSize: '1rem' }}>
+            <p>{account.gamerName}<br />{account.gameNote}</p> 
+                  </span> */}
+            <div className="card-body bg light p-2">  
+           
+            <p style={{fontsize: '5rem', fontWeight: '900'}}>{account.gamerName}<br />{account.gameNote}</p> 
+                  
+              {/* <p>{account.gamerName}<br />{account.gameNote}</p> */}
               {/* <p>{account.gameNote}</p> */}
             </div>
             <button  className="btn btn-light btn-block btn-squared" onClick={() => deleteHandler(account._id)}>Delete</button>

@@ -19,19 +19,25 @@ const Home = () => {
         >
           <AccountForm />
         </div>
-        <div className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <AccountList
-              accounts={accounts}
-              title="Create your game account..."
-            />
-          )}
         </div>
-      </div>
-    </main>
+     </main>
   );
 };
+        {/* <div className="col-12 col-md-8 mb-3">
+          {loading ? (
+            <div>Loading...</div> */}
+           
+          // ) : (
+           
+          //   <AccountList
+            //   accounts={accounts}
+            //   title="Create your game account..."
+            // />
+          // )}
+        // </div>
+//        </div>
+//      </main>
+//   );
+// };
 
 export default Home;

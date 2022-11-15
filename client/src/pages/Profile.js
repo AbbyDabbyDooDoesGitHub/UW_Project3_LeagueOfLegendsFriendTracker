@@ -42,7 +42,7 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
-        <div className="col-12 col-md-10 mb-5">
+        <div className="col-12 col-md-10 mb-5 bg-light">
           <AccountList
             accounts={user.accounts}
             title={`${user.username}'s accounts...`}
@@ -55,7 +55,7 @@ const Profile = () => {
             className="col-12 col-md-10 mb-3 p-3"
             style={{ border: '1px  #1a1a1a' }}
           > 
-          <FriendList/>
+           
             
             
           </div>

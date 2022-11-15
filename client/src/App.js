@@ -53,10 +53,11 @@ function App() {
           <Header />
           <div className="container">
             <Routes>
-              <Route 
+            <Route 
                 path="/"
                 element={<Home />}
               />
+             
               <Route 
                 path="/login" 
                 element={<Login />}
@@ -65,6 +66,7 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
+             
               <Route 
                 path="/me" 
                 element={<Profile />}
