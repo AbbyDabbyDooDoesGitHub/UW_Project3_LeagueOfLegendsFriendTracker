@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -41,16 +41,21 @@ const Signup = () => {
   const DiscordOauth2 = require("discord-oauth2");
 const oauth = new DiscordOauth2();
 
-oauth.tokenRequest({
-	clientId: "1038554224570683474",
-	clientSecret: "3msEwNmM0vEVszCuYm5NJIU_83K1uThe",
+// oauth.tokenRequest({
+// 	clientId: "1038554224570683474",
+// 	clientSecret: "3msEwNmM0vEVszCuYm5NJIU_83K1uThe",
 
-	code: "query code",
-	scope: "identify guilds",
-	grantType: "authorization_code",
+// 	code: "query code",
+// 	scope: "identify guilds",
+// 	grantType: "authorization_code",
 
-	redirectUri: "http://localhost/callback",
-}).then(console.log)
+// 	redirectUri: "http://localhost/callback",
+// }).then(console.log)
+
+// const discordBot = () =>{
+//   let path = ``;
+  
+// }
 
   return (
     <main className="flex-row justify-center mb-4">
@@ -96,7 +101,8 @@ oauth.tokenRequest({
                 >
                   Signup
                 </button>
-                <DiscordLoginButton onClick={() => alert("Hello")} />
+                <DiscordLoginButton onClick={() => alert('Success! Logged in with Discord! haha but not really...')} />
+
               </form>
             )}
 
