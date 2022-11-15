@@ -7,6 +7,7 @@ import { REMOVE_FRIEND} from '../../utils/mutations';
 // import { QUERY_ACCOUNTS, QUERY_ME, QUERY_USER } from '../../utils/queries';
 
 const FriendList = ({ friends = [] }) => {
+
   const { accountId } = useParams();
   const [removeFriend, { error }] = useMutation(REMOVE_FRIEND)
   if (!friends.length) {
@@ -20,6 +21,7 @@ const FriendList = ({ friends = [] }) => {
     window.location.reload();
 
     // window.location.replace('/accounts/:accountId')
+
   }
   return (
     <>
@@ -29,7 +31,7 @@ const FriendList = ({ friends = [] }) => {
       >
         FRIENDS
       </h3>
-      <div className="flex-row my-4">
+      <div id="friendCard" className="flex-row my-4">
         {friends &&
           friends.map((friend) => (
             <div key={friend._id} className="col-12 mb-3 pb-3">
