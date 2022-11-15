@@ -38,6 +38,19 @@ const Signup = () => {
       console.error(e);
     }
   };
+  const DiscordOauth2 = require("discord-oauth2");
+const oauth = new DiscordOauth2();
+
+oauth.tokenRequest({
+	clientId: "1038554224570683474",
+	clientSecret: "3msEwNmM0vEVszCuYm5NJIU_83K1uThe",
+
+	code: "query code",
+	scope: "identify guilds",
+	grantType: "authorization_code",
+
+	redirectUri: "http://localhost/callback",
+}).then(console.log)
 
   return (
     <main className="flex-row justify-center mb-4">
