@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import { DiscordLoginButton } from "react-social-login-buttons";
 
 import Auth from '../utils/auth';
 
@@ -82,6 +83,7 @@ const Signup = () => {
                 >
                   Signup
                 </button>
+                <DiscordLoginButton onClick={() => alert("Hello")} />
               </form>
             )}
 
