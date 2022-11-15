@@ -79,7 +79,7 @@ const AccountForm = () => {
 
    
      <div>
-      <h3>What do you want to say about this game?</h3>
+      <h3>Welcome to Hawkshot! Create your gamers account and add or  remove friends from your account.</h3>
 
       {Auth.loggedIn() ? (
         <>
