@@ -888,3 +888,43 @@ div#aboutUs-div {
   padding: 0;
   /* background-color: #35b931; */
 }
+
+
+
+
+
+.signin-centerDiv {
+
+  margin: auto;
+  width: 60%;
+
+}
+
+.modal-footer-linksDiv {
+  width: 95%;
+  padding-right: 20px;
+  margin: auto;
+  padding-bottom: 10px;
+  /* background-color: #636363; */
+}
+
+.modal-footer a {
+  color: var(--white);
+  background-color: var(--mdBlue);
+}
+
+.modal-footer-linksDiv .modal-footer-cancel {
+  margin-right: 20px;
+  color: var(--mdGrey);
+  background-color: var(--ltGrey);
+}
+
+.modal-footer-linksDiv a:hover {
+  opacity: 1;
+  background-color: var(--mdPurple);
+}
+
+.modal-footer-linksDiv .modal-footer-cancel:hover {
+  color: var(--dkPurple);
+  background-color: var(--ltPurple);
+}
