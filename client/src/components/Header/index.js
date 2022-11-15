@@ -47,7 +47,7 @@ const Header = () => {
 
                 <li><a class="nav-a" href="/NewAccount">Create Account</a></li>
 
-                <li><button class="btn navBtn" id="navBar-signIn" href="/SignIn">Sign In</button></li>
+                <li><a class="btn navBtn" id="navBar-signIn" href="/SignIn">Sign In</a></li>
 
               </>
             )}

@@ -139,7 +139,7 @@ export default function MeetDevs() {
             </div>
 
 
-            <Footer />
+            {/* <Footer /> */}
 
 
         </div>
