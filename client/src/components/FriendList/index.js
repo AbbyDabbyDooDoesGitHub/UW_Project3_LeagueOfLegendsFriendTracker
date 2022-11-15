@@ -19,7 +19,7 @@ const FriendList = ({ friends = [] }) => {
     })
     window.location.reload();
 
-  //   window.location.replace('/accounts/:accountId')
+    // window.location.replace('/accounts/:accountId')
   }
   return (
     <>
