@@ -58,15 +58,15 @@ University of Washington coding bootcamp Project 3:
 ## Test
 
 To test thisapplication, please clone the repo and install the necessary npm dependencies. Type "npm run develop" from root directery of application
-</br> For code review go to the [Github  repo](https://github.com/teshome28sara/MERN-Bookk-Engine-21)
-</br>For deployed site go to  [Google book search]( https://quiet-fortress-12999.herokuapp.com/)
+</br> For code review go to the [Github  repo]( https://github.com/AbbyDabbyDooDoesGitHub/UW_Project3_LeagueOfLegendsFriendTracker.git)
+</br>For deployed site go to  [Hawkshot]( https://hawkshot-friend-tracker.herokuapp.com/)
 
 ## Questions
  
 
  ###  Screenshot
 
- ![Google book search](bookSearch.png)
+ ![Hawkshot](project_screenshot.png)
 
 
 
@@ -74,22 +74,7 @@ To test thisapplication, please clone the repo and install the necessary npm dep
 
 
 
-<!-- Andrew - routes and logins 
-Abby - Handlebars HTML / Building models for contacts
-Gwanju - Heroku Deployment/Stripe Integration -->
 
-
-
-
-### Link to Web App: 
-<!-- LINK TO DEPLOYMENT HERE -->
-
-### App Preview:
-<!-- Replace with path to screenshot   ![My Password Generator Screenshot](./Assets/MyPasswordGeneratorScreenShot.PNG "My Password Generator Screenshot") -->
-
-## Notes
-
-<!-- Use this area to add personal notes on implementation, etc -->
 
 
 
