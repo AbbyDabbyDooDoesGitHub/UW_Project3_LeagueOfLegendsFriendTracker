@@ -15,7 +15,7 @@ const Header = () => {
         <div>
           <Link className="text-light" to="/">
           <img src={proLogo} className='proLogo' alt="" width='200px' hight='200px'/>
-            <h1 className="m-0">Hawkshot</h1>
+            <h1 className="m-0 text-dark">Hawkshot</h1>
           </Link>
           <p className="m-0 bg-dark text-light">💕Create a gamer's contact list💕</p>
         </div>
