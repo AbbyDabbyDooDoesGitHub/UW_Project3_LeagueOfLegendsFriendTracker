@@ -107,10 +107,6 @@ export default function NewAccountPage() {
 
 
 
-            {/* <Footer /> */}
-
-
-
         </div>
 
 

@@ -37,7 +37,7 @@ export default function AddFriend() {
                 {/* <!-- ADD FRIEND HEADER --> */}
                 <div id="addFriend-header">
 
-                    <a id="addFriend-cancelLink" href="./friendlistHome.html">Return to My Friendslist</a>
+                    <a id="addFriend-cancelLink" href="/FriendlistHome">Return to My Friendslist</a>
 
                     <h3>Add a Friend</h3>
 
@@ -85,7 +85,7 @@ export default function AddFriend() {
                                                 Select the Platform Name for this Friend:
 
                                                 <a class='dropdown-trigger selectedDropdown' href='#' data-target='addFriend-platformDropdown'>
-                                                Select Platform Here
+                                                League of Legends
                                                 </a>
 
                                             </label>
@@ -144,10 +144,6 @@ export default function AddFriend() {
 
 
             </div>
-
-
-
-            <Footer />
 
 
 

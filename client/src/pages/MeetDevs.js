@@ -139,8 +139,6 @@ export default function MeetDevs() {
             </div>
 
 
-            {/* <Footer /> */}
-
 
         </div>
 

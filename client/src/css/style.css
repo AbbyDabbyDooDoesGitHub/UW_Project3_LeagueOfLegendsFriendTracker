@@ -928,3 +928,8 @@ div#aboutUs-div {
   color: var(--dkPurple);
   background-color: var(--ltPurple);
 }
+
+#addFriend-cancelLink {
+  position: absolute;
+  top:55px;
+}

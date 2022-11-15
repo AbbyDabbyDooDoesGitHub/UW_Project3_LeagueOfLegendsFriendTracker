@@ -127,7 +127,7 @@ export default function FriendlistHome() {
 
                                     <PlatformDropdown />
 
-                                    <a class="btn" id="friendlist-header-addNew" href='./addFriend.html'>
+                                    <a class="btn" id="friendlist-header-addNew" href='AddFriend'>
                                     ADD NEW FRIEND
                                     </a>
 
@@ -202,7 +202,6 @@ export default function FriendlistHome() {
 
             </div>
 
-            <Footer />
 
         </div>
 

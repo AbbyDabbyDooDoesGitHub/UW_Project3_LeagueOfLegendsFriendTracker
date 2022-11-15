@@ -17,9 +17,9 @@ const Header = () => {
 
             <Link to="/">
               <li><img id="navBar-logo" src="../img/hawkshot-logos/HawkshotLogo-FULL-NoBackground.png" alt="Hawkshot Logo"/></li>
-            </Link>
 
-            <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
+              <li><h1 id="navBar-subtitle">Reveal Your Friendlist</h1></li>
+            </Link>
 
           </ul>
 
