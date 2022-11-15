@@ -145,6 +145,8 @@ export default function AddFriend() {
 
             </div>
 
+            <Footer />
+
 
 
         </div>

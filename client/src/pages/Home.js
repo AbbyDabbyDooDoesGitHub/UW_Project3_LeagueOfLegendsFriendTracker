@@ -123,10 +123,15 @@ export default function Home() {
 
                         </div>
 
-
                     </div>
 
                 </div>
+
+            </div>
+
+            <div id="home-Footer">
+
+            <Footer/>
 
             </div>
 
