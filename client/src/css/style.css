@@ -35,6 +35,12 @@
 }
 
 
+/* #appContainer {
+  margin: 0;
+  padding: 0;
+} */
+
+
 /* NAVBAR STYLINGS --------------------------- */
 /* fills the width of page */
 header {
@@ -846,4 +852,39 @@ label.addFriend-mainText {
   width: 100%;
   height: 35px;
   /* margin-bottom: 20px; */
+}
+
+
+
+
+
+
+/* fixing padding issue */
+
+body {
+  margin:0;
+  padding:0;
+}
+
+div#appContainer {
+  width: 100%;
+  margin: 0%;
+  padding: 0;
+  /* background-color: #21cae4; */
+}
+
+div#all-non-footer-content-div {
+  position: absolute;
+  left: -25%;
+  width: 99.5vw;
+  margin: 0%;
+  padding: 0;
+  /* background-color: #130039; */
+}
+
+div#aboutUs-div {
+  width: 100%;
+  margin: 0%;
+  padding: 0;
+  /* background-color: #35b931; */
 }

@@ -1,4 +1,4 @@
-// alert('JS File is connected');
+alert('JS File is connected');
 
 // MODAL FUNCTIONALITY
 $( document ).ready(function() {
