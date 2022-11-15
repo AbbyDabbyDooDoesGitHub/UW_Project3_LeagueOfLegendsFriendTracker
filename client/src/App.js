@@ -11,21 +11,22 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import pages
 import AddFriend from './pages/AddFriend';
-import friendlistHome from './pages/FriendlistHome';
+import FriendlistHome from './pages/FriendlistHome';
 import Home from './pages/Home';
 import MeetDevs from './pages/MeetDevs';
+import NewAccountPage from './pages/NewAccountPage';
+import SignInPage from './pages/SignInPage';
 
 // import components
 import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import NewAccountModal from './components/NewAccountModal';
-import PlatformDropdown from './components/PlatformDropdown';
-import SignInModal from './components/SignInModal';
+// import NewAccountModal from './components/NewAccountModal';
+// import PlatformDropdown from './components/PlatformDropdown';
+// import SignInModal from './components/SignInModal';
 
 // import mutations
 import { ADD_ACCOUNT } from './utils/mutations';
-import FriendlistHome from './pages/FriendlistHome';
 
 
 
@@ -65,10 +66,6 @@ function App() {
 
           <Banner /> 
 
-          <SignInModal />
-
-          <NewAccountModal />
-
           <div className="container">
             
             <Routes>
@@ -87,6 +84,14 @@ function App() {
               <Route 
                 path="/MeetDevs" 
                 element={<MeetDevs />}
+              />
+              <Route 
+                path="/SignIn" 
+                element={<SignInPage />}
+              />
+              <Route 
+                path="/NewAccount" 
+                element={<NewAccountPage />}
               />
           
             </Routes>

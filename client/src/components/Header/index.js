@@ -45,9 +45,9 @@ const Header = () => {
 
                 <li><a class="nav-a" href="/MeetDevs">Meet the Devs</a></li>
 
-                <li><a class="nav-a modal-trigger" href="#account-creation-modal">Create Account</a></li>
+                <li><a class="nav-a" href="/NewAccount">Create Account</a></li>
 
-                <li><button class="btn navBtn modal-trigger" id="navBar-signIn" href="#sign-in-modal">Sign In</button></li>
+                <li><button class="btn navBtn" id="navBar-signIn" href="/SignIn">Sign In</button></li>
 
               </>
             )}
@@ -65,3 +65,10 @@ const Header = () => {
 };
 
 export default Header;
+
+
+// TO DO
+// get sign ins and account creations swapped to modals
+
+// <li><a class="nav-a modal-trigger" href="#account-creation-modal">Create Account</a></li>
+// <li><button class="btn navBtn modal-trigger" id="navBar-signIn" href="#sign-in-modal">Sign In</button></li> 

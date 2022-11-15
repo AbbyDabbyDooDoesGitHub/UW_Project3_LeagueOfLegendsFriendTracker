@@ -113,10 +113,10 @@ export default function Home() {
                                 <>
 
                                     <a href="/MeetDevs">Meet the Devs</a>
+                                                                        
+                                    <a href="/NewAccount">Create Account</a>
 
-                                    <a class="modal-trigger" href="#account-creation-modal">Create Account</a>
-
-                                    <a class="modal-trigger" href="#sign-in-modal">Sign In</a>
+                                    <a href="/SignIn">Sign In</a>
 
                                 </>
                             )}
@@ -142,3 +142,7 @@ export default function Home() {
   )
 
 }
+
+// <a class="modal-trigger" href="#account-creation-modal">Create Account</a>
+
+// <a class="modal-trigger" href="#sign-in-modal">Sign In</a>
